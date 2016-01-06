@@ -1,0 +1,79 @@
+//  -----------------------------------------------------------------
+//	PARTIAL: NAVIGATION
+//  -----------------------------------------------------------------
+
+// jQuery.mmenu toggle
+
+// a.header-menu-btn {
+// 	@include respond($break-tablet1) {
+// 		display: none;
+// 	}
+// }
+
+// jQuery SlickNav toggle
+
+// .slicknav_menu {
+// 	@include respond($break-tablet1) {
+// 		display: none;
+// 	}
+// }
+
+// Hide primary header menu on mobile devices
+
+#header-menu {
+	display: none;
+
+	@include respond($break-tablet1) {
+		display: block;
+	}
+}
+
+// Dropdown menu
+
+@media ("min-width": $break-tablet1) {
+
+	.nav-dropdown ul {
+		position: relative;
+	}
+
+	.nav-dropdown ul li {
+		float: left;
+		zoom: 1;
+	}
+
+	.nav-dropdown ul li a {
+		display: block;
+	}
+
+	.nav-dropdown ul li.hover,
+	.nav-dropdown ul li:hover {
+		position: relative;
+	}
+
+	.nav-dropdown ul ul {
+		visibility: hidden;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		z-index: 1;
+	}
+
+	.nav-dropdown ul ul li {
+		float: none;
+	}
+
+	/* IE 6 & 7 Needs Inline Block */
+	.nav-dropdown ul ul li a {
+		display: inline-block;
+		width: 100%;
+	}
+
+	.nav-dropdown ul ul ul {
+		left: 100%;
+		top: 0;
+	}
+
+	.nav-dropdown ul li:hover > ul {
+		visibility: visible;
+	}
+}

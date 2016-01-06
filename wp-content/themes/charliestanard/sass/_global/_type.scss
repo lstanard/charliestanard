@@ -1,0 +1,79 @@
+//  -----------------------------------------------------------------
+//	BASE
+//  -----------------------------------------------------------------
+
+html {
+	font: normal 58% "HelveticaNeue", "Helvetica-Neue", Helvetica, Arial, sans-serif;
+	line-height: 100%;
+
+	@include respond($break-phone2) {
+		font-size: 62.5%;
+	}
+}
+
+body {
+	@include font-size(1.5);
+	@include line-height(2.2);
+}
+
+//  -----------------------------------------------------------------
+//	HEADLINES
+//  -----------------------------------------------------------------
+
+h1, h2, h3, h4, h5, h6 {
+	a:link,
+	a:visited {
+		text-decoration: none;
+	}
+}
+
+h1 {}
+h2 {}
+h3 {}
+h4 {}
+h5 {}
+h6 {}
+
+//  -----------------------------------------------------------------
+//	PARAGRAPH & LIST STYLES
+//  -----------------------------------------------------------------
+
+p, ul li, ol li {
+	@include font-size(1.5);
+	@include line-height(2.2);
+	color: $body-copy;
+}
+
+p {
+	margin: 0 0 15px 0;
+}
+
+p strong {}
+
+em {
+	font-style: italic;
+}
+
+small {
+	@include font-size(1.2);
+	@include line-height(1.8);
+}
+
+//  -----------------------------------------------------------------
+//	MISC
+//  -----------------------------------------------------------------
+
+sub, sup {
+	font-size: .5em;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -0.5em;
+}
+
+sub {
+	bottom: -0.25em;
+}

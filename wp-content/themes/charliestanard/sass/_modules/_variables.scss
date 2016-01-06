@@ -1,0 +1,49 @@
+//  -----------------------------------------------------------------
+//	LAYOUT VARIABLES
+//
+//	The 'px' unit is omitted from the end of these values for use in
+//	the percentage() function. Value can be manually appended as
+//	needed (max-width: $content-width + px;).
+//  -----------------------------------------------------------------
+
+$content-width:					1170;
+$content-main-width:			780;
+$content-sidebar-width:			390;
+$content-gutter:				15;
+
+//  -----------------------------------------------------------------
+//	BREAKPOINTS
+//  -----------------------------------------------------------------
+
+$break-phone1: 					480px;
+$break-phone2: 					640px;
+$break-tablet1: 				768px;
+$break-desktop1: 				992px;
+$break-desktop2: 				1010px;
+$break-desktop3: 				1200px;
+
+//  -----------------------------------------------------------------
+//	COLOR VARIABLES
+//
+//	Assign hex values a color name, then reference that color name
+//	below using a functional variable name
+//  -----------------------------------------------------------------
+
+$dark-grey: 					#414142;
+
+//  -----------------------------------------------------------------
+//	FUNCTIONAL VARIABLES
+//
+//	Functional variable names should describe how or where the color
+//	is being used
+//  -----------------------------------------------------------------
+
+$body-copy: 					$dark-grey;
+
+//  -----------------------------------------------------------------
+//	MISC VARIABLES
+//  -----------------------------------------------------------------
+
+//  -----------------------------------------------------------------
+//	Z-INDEX VALUES
+//  -----------------------------------------------------------------

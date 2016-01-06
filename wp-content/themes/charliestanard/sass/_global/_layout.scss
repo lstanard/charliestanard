@@ -1,0 +1,23 @@
+//  -----------------------------------------------------------------
+//	LAYOUT
+//  -----------------------------------------------------------------
+
+.wrapper, main {
+	@include wrap;
+}
+
+.container {
+	@include section(0,0,true,false);
+}
+
+.column {
+	@include column;
+}
+
+.interior-wrapper {
+	padding-bottom: 90px;
+}
+
+.main {}
+
+.sidebar {}

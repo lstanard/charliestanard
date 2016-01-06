@@ -1,0 +1,30 @@
+//  -----------------------------------------------------------------
+//	FORMS
+//  -----------------------------------------------------------------
+
+form {
+
+	input[type="text"],
+	input[type="search"],
+	input[type="email"] {}
+
+	textarea {}
+
+	select {
+
+		// Suppress default browser select menu styling
+		appearance: none;
+		border: none;
+		border-radius: 0;
+
+		// Firefox fix for custom select style
+		text-indent: 0.01px;
+		text-overflow: '';
+
+		// IE fix for custom select style
+		&::-ms-expand {
+			display: none;
+		}
+	}
+
+}

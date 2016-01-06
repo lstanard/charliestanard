@@ -1,0 +1,42 @@
+//  -----------------------------------------------------------------
+//	DEFAULTS
+//  -----------------------------------------------------------------
+
+*, *:before, *:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #FFF;
+	-webkit-text-size-adjust: none;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+
+	@include respond($break-desktop1) {
+		min-width: 960px;
+	}
+}
+
+body, html {
+	width: 100%;
+}
+
+//  -----------------------------------------------------------------
+//	DEFAULTS: Link styles
+//  -----------------------------------------------------------------
+
+a:link,
+a:visited {
+	cursor: pointer;
+}
+
+a:hover,
+a:active {
+	text-decoration: none;
+}
+
+a:focus {
+	outline: none;
+}
