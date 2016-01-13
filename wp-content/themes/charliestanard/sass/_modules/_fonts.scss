@@ -1,3 +1,65 @@
 //  -----------------------------------------------------------------
 //	FONT-FAMILY RULES
 //  -----------------------------------------------------------------
+
+@font-face {
+	font-family: 'aleoregular';
+	src: url('../fonts/aleo-regular-webfont.eot');
+	src: url('../fonts/aleo-regular-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/aleo-regular-webfont.woff') format('woff'),
+		 url('../fonts/aleo-regular-webfont.ttf') format('truetype'),
+		 url('../fonts/aleo-regular-webfont.svg#aleoregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'aleobold';
+	src: url('../fonts/aleo-bold-webfont.eot');
+	src: url('../fonts/aleo-bold-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/aleo-bold-webfont.woff') format('woff'),
+		 url('../fonts/aleo-bold-webfont.ttf') format('truetype'),
+		 url('../fonts/aleo-bold-webfont.svg#aleobold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'aleolight';
+	src: url('../fonts/aleo-light-webfont.eot');
+	src: url('../fonts/aleo-light-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/aleo-light-webfont.woff') format('woff'),
+		 url('../fonts/aleo-light-webfont.ttf') format('truetype'),
+		 url('../fonts/aleo-light-webfont.svg#aleolight') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+$aleo-regular: 	'aleoregular', Helvetica, Arial, sans-serif;
+$aleo-bold: 	'aleobold', Helvetica, Arial, sans-serif;
+$aleo-light: 	'aleolight', Helvetica, Arial, sans-serif;
+$libre: 		'Libre Baskerville', serif;
+$lato: 			'Lato', sans-serif;
+
+%aleo {
+	font-family: $aleo-regular;
+	font-weight: normal;
+}
+
+%aleo-bold {
+	font-family: $aleo-bold;
+	font-weight: normal;
+}
+
+%aleo-light {
+	font-family: $aleo-light;
+	font-weight: normal;
+}
+
+%libre {
+	font-family: $libre;
+}
+
+%lato {
+	font-family: $lato;
+}

@@ -12,8 +12,7 @@ html {
 }
 
 body {
-	@include font-size(1.5);
-	@include line-height(2.2);
+	@include fslh(1.5, 2.2);
 }
 
 //  -----------------------------------------------------------------
@@ -27,7 +26,24 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
-h1 {}
+h1 {
+	margin: 0 0 15px 0;
+
+	@extend %aleo;
+	font-size: 5.6rem;
+	line-height: 6.2rem;
+	color: $dark-grey;
+}
+
+h1 + p {
+	margin: 0;
+
+	@extend %aleo;
+	font-size: 2.4rem;
+	line-height: 2.8rem;
+	color: $dark-grey50;
+}
+
 h2 {}
 h3 {}
 h4 {}
@@ -39,8 +55,8 @@ h6 {}
 //  -----------------------------------------------------------------
 
 p, ul li, ol li {
-	@include font-size(1.5);
-	@include line-height(2.2);
+	@extend %libre;
+	@include fslh(1.5, 2.2);
 	color: $body-copy;
 }
 
@@ -55,8 +71,7 @@ em {
 }
 
 small {
-	@include font-size(1.2);
-	@include line-height(1.8);
+	@include fslh(1.2, 1.8);
 }
 
 //  -----------------------------------------------------------------

@@ -17,7 +17,7 @@ $content-gutter:				15;
 
 $break-phone1: 					480px;
 $break-phone2: 					640px;
-$break-tablet1: 				768px;
+$break-tablet1: 					768px;
 $break-desktop1: 				992px;
 $break-desktop2: 				1010px;
 $break-desktop3: 				1200px;
@@ -29,7 +29,16 @@ $break-desktop3: 				1200px;
 //	below using a functional variable name
 //  -----------------------------------------------------------------
 
-$dark-grey: 					#414142;
+$red: 							#bc4505;
+$blue: 							#66c9c5;
+$green: 						#61bd45;
+$yellow: 						#ffc522;
+$light-grey: 					#f6f6f6;
+$dark-grey: 					#3a3a3a;
+$dark-grey60: 					#898989;
+$dark-grey50: 					#9c9c9c;
+$dark-grey40: 					#b0b0b0;
+$dark-grey10: 					#e3e3e3;
 
 //  -----------------------------------------------------------------
 //	FUNCTIONAL VARIABLES
@@ -39,6 +48,8 @@ $dark-grey: 					#414142;
 //  -----------------------------------------------------------------
 
 $body-copy: 					$dark-grey;
+
+$page-bg:						$light-grey;
 
 //  -----------------------------------------------------------------
 //	MISC VARIABLES
