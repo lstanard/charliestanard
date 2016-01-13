@@ -373,20 +373,20 @@ SCSS variables are information about icon's compiled state, stored under its ori
 The large array-like variables contain all information about a single icon
 $icon-home: x y offset_x offset_y width height total_width total_height image_path;
 */
-.container, .type-post,
+.type-post,
 .type-page,
 .post-excerpt {
 	zoom: 1; }
-	.container:before, .type-post:before,
+	.type-post:before,
 	.type-page:before,
-	.post-excerpt:before, .container:after, .type-post:after,
+	.post-excerpt:before, .type-post:after,
 	.type-page:after,
 	.post-excerpt:after {
 		content: "\0020";
 		display: block;
 		height: 0;
 		overflow: hidden; }
-	.container:after, .type-post:after,
+	.type-post:after,
 	.type-page:after,
 	.post-excerpt:after {
 		clear: both; }
@@ -529,46 +529,6 @@ sup {
 
 sub {
 	bottom: -0.25em; }
-
-.wrapper, main {
-	margin: 0 auto;
-	min-height: 1px;
-	padding: 0;
-	position: relative;
-	width: 100%; }
-
-.container {
-	margin: 0 auto;
-	min-height: 1px;
-	padding: 0;
-	position: relative;
-	width: 100%;
-	padding-top: 0;
-	padding-bottom: 0;
-	padding-right: 3%;
-	padding-left: 3%; }
-	@media (min-width: 1010px) {
-		.container {
-			max-width: 1170px;
-			padding-left: 15px;
-			padding-right: 15px; } }
-
-.column {
-	min-height: 1px;
-	padding-bottom: 0;
-	padding-top: 0;
-	position: relative; }
-	@media (min-width: 640px) {
-		.column {
-			float: left;
-			margin-left: 0%;
-			margin-right: 0%;
-			padding-top: 30px;
-			padding-bottom: 30px;
-			width: 51.0638297872%; } }
-
-.interior-wrapper {
-	padding-bottom: 90px; }
 
 form select {
 	-webkit-appearance: none;
