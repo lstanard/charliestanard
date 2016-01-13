@@ -1,7 +1,6 @@
-		</main>
-		<footer class="footer" role="contentinfo">
-		</footer>
-	</div> <!-- end .wrapper -->
+	</main>
+	<footer class="footer">
+	</footer>
 	<?php wp_footer(); ?>
 </body>
 </html>

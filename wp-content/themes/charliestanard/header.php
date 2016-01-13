@@ -16,15 +16,14 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-	<div class="wrapper">
-		<header class="header" role="banner">
-			<div class="container">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="header-logo"><img src="<?php echo get_theme_mod( 'logo_upload' ); ?>" alt="<?php echo get_bloginfo('name'); ?>"></a>
-				<nav class="nav nav-dropdown" role="navigation" id="header-menu">
-					<ul>
-						<?php wp_nav_menu( array( 'theme_location' => 'Primary Navigation', 'items_wrap' => '%3$s' ) ); ?>
-					</ul>
-				</nav>
-			</div>
-		</header>
-		<main role="main">
+	<header class="header" role="banner">
+		<div class="container">
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="header-logo"><img src="<?php echo get_theme_mod( 'logo_upload' ); ?>" alt="<?php echo get_bloginfo('name'); ?>"></a>
+			<nav class="nav nav-dropdown" role="navigation" id="header-menu">
+				<ul>
+					<?php wp_nav_menu( array( 'theme_location' => 'Primary Navigation', 'items_wrap' => '%3$s' ) ); ?>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<main role="main">

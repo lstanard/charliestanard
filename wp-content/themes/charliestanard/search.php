@@ -34,57 +34,51 @@
 
 ?>
 
-	<div class="interior-wrapper">
-		<div class="container">
-			<section class="main">
-				<h1><?php echo sprintf('%s Search Results for: ', $wp_query->found_posts ); echo get_search_query(); ?></h1>
+	<h1><?php echo sprintf('%s Search Results for: ', $wp_query->found_posts ); echo get_search_query(); ?></h1>
 
-				<?php
-					$my_search_object->the_form();
+	<?php
+		$my_search_object->the_form();
 
-					if ( have_posts() ):
-						while ( have_posts() ): the_post();
+		if ( have_posts() ):
+			while ( have_posts() ): the_post();
 
-						?>
-							<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-							<p><strong>Author:</strong> <?php the_author();?> &nbsp;&nbsp; <strong>Date:</strong> <?php the_date();?></p>
-							<?php the_excerpt(); ?>
-							<p><a href="<?php the_permalink(); ?>">Read more...</a></p>
-						<?php
-						endwhile;
+			?>
+				<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+				<p><strong>Author:</strong> <?php the_author();?> &nbsp;&nbsp; <strong>Date:</strong> <?php the_date();?></p>
+				<?php the_excerpt(); ?>
+				<p><a href="<?php the_permalink(); ?>">Read more...</a></p>
+			<?php
+			endwhile;
 
-						$pagination = html5wp_pagination(false, false);
-						$pagination = str_replace('/page/', '&page=', $pagination);
-						$pagination = str_replace('/">', '">', $pagination);
-				?>
+			$pagination = html5wp_pagination(false, false);
+			$pagination = str_replace('/page/', '&page=', $pagination);
+			$pagination = str_replace('/">', '">', $pagination);
+	?>
 
-				<div class="pagination">
-					<?php echo $pagination; ?>
-				</div>
-
-				<?php
-
-					else :
-						echo 'Sorry, no pages matched your criteria.';
-					endif;
-
-					$wp_query = $temp_query;
-					wp_reset_query();
-
-					} else {
-				?>
-
-				<h1>Search</h1>
-
-				<?php
-					$my_search_object->the_form();
-
-					}
-				?>
-
-			</section>
-			<?php get_sidebar(); ?>
-		</div>
+	<div class="pagination">
+		<?php echo $pagination; ?>
 	</div>
+
+	<?php
+
+		else :
+			echo 'Sorry, no pages matched your criteria.';
+		endif;
+
+		$wp_query = $temp_query;
+		wp_reset_query();
+
+		} else {
+	?>
+
+	<h1>Search</h1>
+
+	<?php
+		$my_search_object->the_form();
+
+		}
+	?>
+
+<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>
