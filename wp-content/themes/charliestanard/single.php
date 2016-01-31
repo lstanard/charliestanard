@@ -1,6 +1,9 @@
 <?php get_header(); ?>
 
-	<?php get_template_part('loop'); ?>
-	<?php get_sidebar(); ?>
+	<div class="inner-wrap">
+		<div class="main-wrap">
+			<?php get_template_part('loop'); ?>
+		</div>
+	</div>
 
 <?php get_footer(); ?>

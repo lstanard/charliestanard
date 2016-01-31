@@ -1,0 +1,24 @@
+{
+  "name": "charliestanard",
+  "description": "Personal website WordPress theme",
+  "main": "bower.json",
+  "authors": [
+    "Charlie Stanard <louis.stanard@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/lstanard/charliestanard",
+  "moduleType": [
+    "globals"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "magnific-popup": "^1.0.1",
+    "respond": "^1.4.2"
+  }
+}

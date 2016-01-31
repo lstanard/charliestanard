@@ -3,17 +3,27 @@
 //  -----------------------------------------------------------------
 
 .nav ul {
-	margin: 0;
-	padding: 0;
+	margin: 0 0 60px;
+	padding: 30px 0 0;
 
 	list-style: none;
+	text-align: center;
 
 	li {
-		margin: 0 0 10px;
+		display: inline-block;
+
+		margin: 0 30px 10px;
 	}
 
 	a {
+		@extend %roboto-med;
+
+		color: $nav-link;
 		text-decoration: none;
+	}
+
+	a:hover {
+		color: $green;
 	}
 }
 

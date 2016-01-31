@@ -43,6 +43,7 @@ wp-content/themes/*
 # wp-content/themes/priorities-usa/js/site.js
 # wp-content/themes/priorities-usa/js/vendor-build.js
 # wp-content/themes/priorities-usa/webfontkit-20151102-223851/*
+wp-content/themes/charliestanard/bower_components/
 
 # ignore all files starting with . or ~
 .*

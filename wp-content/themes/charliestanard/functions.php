@@ -24,10 +24,6 @@ if (function_exists('add_theme_support')) {
 	add_theme_support('title-tag');
 
 	// Codex: http://codex.wordpress.org/Post_Thumbnails
-	// add_image_size('large', 700, '', true);
-	// add_image_size('medium', 250, '', true);
-	// add_image_size('small', 120, '', true);
-
 	add_image_size('project-thumb', 800, 571, false);
 }
 
@@ -38,7 +34,6 @@ if (function_exists('add_theme_support')) {
 function include_theme_scripts_styles() {
 
 	// Load primary theme stylesheet
-	// TODO: Switch to minififed CSS before releasing final theme files
 	wp_enqueue_style(
 		'site',
 		get_template_directory_uri() . '/css/site.css'
@@ -50,24 +45,23 @@ function include_theme_scripts_styles() {
 		get_template_directory_uri() . '/js/vendor-build.min.js',
 		array( 'jquery' ),
 		false,
-		true // Load scripts into the footer
+		true
 	);
 
 	// Load jQuery dependent custom site scripts
-	// TODO: Switch to minififed JS before releasing final theme files
 	wp_enqueue_script(
 		'custom-site-scripts',
 		get_template_directory_uri() . '/js/site.js',
 		array( 'jquery' ),
 		false,
-		true // Load scripts into the footer
+		true
 	);
 
 	// Load respond.js only in Internet Explorer 8 and below
 	if( preg_match('/(?i)msie [1-8]/', $_SERVER['HTTP_USER_AGENT']) ) {
 		wp_enqueue_script(
 			'respond-js',
-			get_template_directory_uri() . '/js/_vendor/respond.min.js'
+			get_template_directory_uri() . '/js/lib/respond.min.js'
 		);
 	}
 

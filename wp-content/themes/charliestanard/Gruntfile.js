@@ -4,6 +4,23 @@ module.exports = function(grunt) {
 		pkg: grunt.file.readJSON('package.json'),
 
 		// Scripts
+		jshint: {
+			all: ['Gruntfile.js', 'js/src/*.js']
+		},
+
+		concat: {
+			dist: {
+				src: ['js/src/utility.js', 'js/src/custom.js'],
+				dest: 'js/site.js'
+			}
+		},
+
+		uglify: {
+			dist: {
+				src: ['js/site.js'],
+				dest: 'js/site.min.js'
+			}
+		},
 
 		// Styles
 		scsslint: {
@@ -67,6 +84,14 @@ module.exports = function(grunt) {
 		// Images
 
 		// Misc
+		copy: {
+			bower_components: {
+				files: {
+					'js/lib/respond.min.js': ['bower_components/respond/dest/respond.min.js'],
+				}
+			}
+		},
+
 		watch: {
 			grunt: {
 				files: ['Gruntfile.js', '*.php'],
@@ -80,12 +105,50 @@ module.exports = function(grunt) {
 				options: {
 					livereload: true
 				}
+			},
+			scripts: {
+				files: ['js/*.js', 'js/**/*.js'],
+				tasks: ['script'],
+				options: {
+					livereload: true
+				}
 			}
 		}
 
 	});
 
+	// Tasks
+	grunt.registerTask('style', [
+		'scsslint',
+		'sass',
+		'postcss',
+		'cssnano'
+	]);
+
+	grunt.registerTask('script', [
+		'copy:bower_components',
+		'jshint',
+		'concat',
+		'uglify'
+	]);
+
+	grunt.registerTask('default', [
+		'style',
+		'script'
+	]);
+
+	grunt.registerTask('build', [
+		'style',
+		'script'
+	]);
+
+	grunt.registerTask('dev', [
+		'build',
+		'watch'
+	]);
+
 	// Load plugins
+	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-compress');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
@@ -96,9 +159,5 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-newer');
 	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-scss-lint');
-
-	// Tasks
-	grunt.registerTask('default', ['scsslint', 'sass', 'postcss', 'cssnano']);
-	grunt.registerTask('style', ['scsslint', 'sass', 'postcss', 'cssnano']);
 
 };

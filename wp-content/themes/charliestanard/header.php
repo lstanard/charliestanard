@@ -7,24 +7,22 @@
 <head>
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link href="//www.google-analytics.com" rel="dns-prefetch">
-	<link href="<?php echo get_template_directory_uri(); ?>/img/icons/favicon.ico" rel="shortcut icon">
-	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
 	<link href="http://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,300,100" rel="stylesheet" type="text/css">
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-	<header class="header" role="banner">
+	<header class="header">
 		<div class="container">
-			<?php /*<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="header-logo"><img src="<?php echo get_theme_mod( 'logo_upload' ); ?>" alt="<?php echo get_bloginfo('name'); ?>"></a>
-			<nav class="nav nav-dropdown" role="navigation" id="header-menu">
+			<nav class="nav">
 				<ul>
 					<?php wp_nav_menu( array( 'theme_location' => 'Primary Navigation', 'items_wrap' => '%3$s' ) ); ?>
 				</ul>
-			</nav>*/ ?>
+			</nav>
+			<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Hi, I&rsquo;m Charlie.</a></h1>
+			<p>Interactive Designer &amp; Developer</p>
+			<hr />
 		</div>
 	</header>
 	<main role="main">
