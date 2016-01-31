@@ -9,8 +9,9 @@
 	&:after {
 		content: '\0020';
 		display: block;
-		height: 0;
 		overflow: hidden;
+
+		height: 0;
 	}
 
 	&:after {

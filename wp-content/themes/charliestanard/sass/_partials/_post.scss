@@ -47,9 +47,10 @@
 
 	ol,
 	ul {
-		list-style-position: outside;
 		margin: 0 0 15px 12px;
 		padding: 0 0 0 20px;
+
+		list-style-position: outside;
 	}
 
 	ol {
@@ -77,6 +78,7 @@
 	a .aligncenter,
 	.wp-caption.aligncenter {
 		display: block;
+
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -85,6 +87,7 @@
 	a .alignleft,
 	.wp-caption.alignleft {
 		float: left;
+
 		margin: 0 16px 16px;
 	}
 
@@ -92,6 +95,7 @@
 	a .alignright,
 	.wp-caption.alignright {
 		float: right;
+
 		margin: 0 0 16px 16px;
 	}
 

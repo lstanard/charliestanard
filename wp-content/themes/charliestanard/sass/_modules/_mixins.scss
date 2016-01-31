@@ -69,14 +69,14 @@
 	padding-bottom: $padding-bottom;
 
 	@if $side-padding == true {
-		padding-right: 3%;
 		padding-left: 3%;
+		padding-right: 3%;
 	}
 
 	@include respond($break-phone2) {
 		@if $use-default-padding == true {
-			padding-top: 90px;
 			padding-bottom: 60px;
+			padding-top: 90px;
 		}
 	}
 
@@ -86,8 +86,8 @@
 		padding-right: 15px;
 
 		@if $use-default-padding == true {
-			padding-top: 120px;
 			padding-bottom: 90px;
+			padding-top: 120px;
 		}
 	}
 }
@@ -101,10 +101,11 @@
 
 	@include respond($break-point) {
 		float: left;
+
 		margin-left: percentage($margin-left/$parent-width);
 		margin-right: percentage($margin-right/$parent-width);
-		padding-top: $padding-top;
 		padding-bottom: $padding-bottom;
+		padding-top: $padding-top;
 		width: percentage($width/$parent-width);
 	}
 }
@@ -144,6 +145,7 @@
 	&:active {
 		background-color: $secondary-color;
 		border: 1px solid $color;
+
 		color: $color;
 	}
 
@@ -152,11 +154,13 @@
 	@if $ghost == true {
 		background: transparent;
 		border: 1px solid $color;
+
 		color: $color;
 
 		&:hover,
 		&:active {
 			background-color: $color;
+
 			color: $secondary-color;
 		}
 	}
@@ -165,12 +169,14 @@
 		padding-right: 30px;
 
 		&:after {
-			@include font-size(1.8);
-			bottom: 13px;
 			content: '\203a';
 			display: block;
+
+			bottom: 13px;
 			position: absolute;
 			right: 18px;
+
+			font-size: 1.8rem;
 		}
 	}
 }

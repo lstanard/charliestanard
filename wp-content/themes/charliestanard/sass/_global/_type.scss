@@ -23,8 +23,9 @@ body {
 a:link,
 a:visited {
 	@extend %roboto-med;
-	cursor: pointer;
+
 	color: $blue;
+	cursor: pointer;
 	text-decoration: none;
 
 	transition: color .15s;
@@ -61,27 +62,42 @@ h1 {
 
 	margin: 0;
 
-	font-size: 2.4rem;
-	line-height: 2.8rem;
 	color: $dark-grey;
+	font-size: 3rem;
+	line-height: 3.6rem;
+	text-align: center;
 
 	+ p {
 		@extend %roboto-light;
 
 		margin: 0;
 
+		color: $dark-grey50;
 		font-size: 1.5rem;
 		line-height: 2.8rem;
-		color: $dark-grey50;
+		text-align: center;
 	}
 }
 
 h2 {
 	@extend %roboto-med;
 
+	margin: 15px 0 45px;
+
 	color: $green;
 	font-size: 2.2rem;
 	line-height: 2.6rem;
+	text-align: center;
+}
+
+h3 {
+	@extend %roboto-light;
+
+	margin: 5px 0 10px;
+
+	color: $dark-grey;
+	font-size: 1.6rem;
+	line-height: 2.4rem;
 }
 
 //  -----------------------------------------------------------------
@@ -101,10 +117,10 @@ ol li {
 .intro {
 	@extend %roboto;
 
-	margin-top: 45px;
-
 	font-size: 1.8rem;
 	line-height: 2.8rem;
+	// TODO: Not sure whether or not I like the indent
+	text-indent: 60px;
 }
 
 p {
@@ -126,10 +142,12 @@ small {
 
 sub,
 sup {
+	vertical-align: baseline;
+
+	position: relative;
+
 	font-size: .5em;
 	line-height: 0;
-	position: relative;
-	vertical-align: baseline;
 }
 
 sup {

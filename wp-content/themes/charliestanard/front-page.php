@@ -5,9 +5,16 @@ Template Name: Home page
 ?>
 <?php get_header(); ?>
 
-	<h1>Hi, I&rsquo;m Charlie</h1>
-	<p>Interactive Designer &amp; Developer</p>
-
-	<?php get_template_part('loop'); ?>
+	<div class="outer-wrap">
+		<div class="inner-wrap">
+			<div class="main-wrap">
+				<?php get_template_part('loop'); ?>
+				<hr>
+				<h2>Projects</h2>
+				<?php display_work_posts(); ?>
+				<hr>
+			</div>
+		</div>
+	</div>
 
 <?php get_footer(); ?>

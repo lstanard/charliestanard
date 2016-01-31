@@ -1,12 +1,6 @@
 <?php
 
 /*------------------------------------*\
-	Constants
-\*------------------------------------*/
-
-include('inc/constants.php');
-
-/*------------------------------------*\
 	Theme Settings
 \*------------------------------------*/
 
@@ -30,10 +24,11 @@ if (function_exists('add_theme_support')) {
 	add_theme_support('title-tag');
 
 	// Codex: http://codex.wordpress.org/Post_Thumbnails
-	add_image_size('large', 700, '', true);
-	add_image_size('medium', 250, '', true);
-	add_image_size('small', 120, '', true);
-	add_image_size('custom-size', 700, 200, true);
+	// add_image_size('large', 700, '', true);
+	// add_image_size('medium', 250, '', true);
+	// add_image_size('small', 120, '', true);
+
+	add_image_size('project-thumb', 800, 571, false);
 }
 
 /*------------------------------------*\
@@ -172,5 +167,9 @@ require_once('inc/custom-fields.php');
 
 // Theme customizer options
 require_once('inc/customizer.php');
+
+require_once('inc/admin/theme-settings.php');
+
+require_once('inc/work.php');
 
 ?>

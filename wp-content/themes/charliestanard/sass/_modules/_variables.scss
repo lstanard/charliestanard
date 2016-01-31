@@ -18,8 +18,6 @@ $content-gutter:				15;
 $break-phone1: 					480px;
 $break-phone2: 					640px;
 $break-tablet1: 				768px;
-// $break-desktop1: 				992px;
-// $break-desktop2: 				1010px;
 $break-desktop3: 				1200px;
 
 $break-desktop1:				940px;
@@ -34,7 +32,7 @@ $break-desktop2:				1210px;
 
 $red: 							#bc4505;
 $blue: 							#66c9c5;
-$green: 						#61bd45;
+$green: 						#2cc990; // old #61bd45
 $yellow: 						#ffc522;
 $light-grey: 					#f6f6f6;
 $dark-grey: 					#3a3a3a;
@@ -51,7 +49,9 @@ $dark-grey10: 					#e3e3e3;
 //  -----------------------------------------------------------------
 
 $body-copy: 					$dark-grey;
+$footer-copy:					$dark-grey40;
 $page-bg:						#fff;
+$tile-border:					$light-grey;
 
 //  -----------------------------------------------------------------
 //	MISC VARIABLES

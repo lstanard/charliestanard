@@ -13,17 +13,18 @@
 	<link href="<?php echo get_template_directory_uri(); ?>/img/icons/favicon.ico" rel="shortcut icon">
 	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
 	<link href="http://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,300,100" rel="stylesheet" type="text/css">
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
 	<header class="header" role="banner">
 		<div class="container">
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="header-logo"><img src="<?php echo get_theme_mod( 'logo_upload' ); ?>" alt="<?php echo get_bloginfo('name'); ?>"></a>
+			<?php /*<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="header-logo"><img src="<?php echo get_theme_mod( 'logo_upload' ); ?>" alt="<?php echo get_bloginfo('name'); ?>"></a>
 			<nav class="nav nav-dropdown" role="navigation" id="header-menu">
 				<ul>
 					<?php wp_nav_menu( array( 'theme_location' => 'Primary Navigation', 'items_wrap' => '%3$s' ) ); ?>
 				</ul>
-			</nav>
+			</nav>*/ ?>
 		</div>
 	</header>
 	<main role="main">
