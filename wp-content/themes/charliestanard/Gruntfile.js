@@ -6,13 +6,22 @@ module.exports = function(grunt) {
 		// Scripts
 
 		// Styles
+		scsslint: {
+			options: {
+				config: '.scss-lint.yml',
+				colorizeOutput: true,
+			},
+			dist: {
+				src: ['sass/*.scss', 'sass/*/*.scss', '!sass/_vendor/*.scss', '!sass/_modules/_sprites-2x.scss']
+			}
+		},
+
 		sass: {
 			options: { // https://github.com/sass/node-sass#options
 				sourceMap: true,
 				style: 'expanded',
 				indentType: 'tab',
 				indentWidth: 1
-				// sourceComments: true,
 			},
 			dist: {
 				files: [{
@@ -83,9 +92,10 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-cssnano');
 	grunt.loadNpmTasks('grunt-newer');
 	grunt.loadNpmTasks('grunt-sass');
+	grunt.loadNpmTasks('grunt-scss-lint');
 
 	// Tasks
-	grunt.registerTask('default', ['sass', 'postcss', 'cssnano']);
-	grunt.registerTask('style', ['sass', 'postcss', 'cssnano']);
+	grunt.registerTask('default', ['scsslint', 'sass', 'postcss', 'cssnano']);
+	grunt.registerTask('style', ['scsslint', 'sass', 'postcss', 'cssnano']);
 
 };

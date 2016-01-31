@@ -1,3 +1,63 @@
 //  -----------------------------------------------------------------
+//	DEFAULTS
+//  -----------------------------------------------------------------
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+//  -----------------------------------------------------------------
 //	LAYOUT
 //  -----------------------------------------------------------------
+
+body {
+	background-color: $page-bg;
+
+	@include respond($break-desktop1) {
+		min-width: 960px;
+	}
+}
+
+body,
+html {
+	width: 100%;
+}
+
+.outer-wrap {
+	padding: 60px;
+}
+
+.inner-wrap {
+	position: relative;
+
+	height: 100vh;
+	width: 100%;
+
+	margin: 0 auto;
+	padding: 30px;
+
+	background-color: $page-bg;
+}
+
+.main-wrap {
+	float: left;
+	padding: 0 10% 0 3%;
+	margin: 0 0 0 20%;
+	width: 80%;
+
+	@include respond($break-desktop1) {
+		padding-right: 15%;
+	}
+
+	@include respond($break-desktop2) {
+		padding: 0 25% 0 5%;
+	}
+}
+
+.sidebar {
+	float: left;
+	position: fixed;
+	width: 20%;
+}

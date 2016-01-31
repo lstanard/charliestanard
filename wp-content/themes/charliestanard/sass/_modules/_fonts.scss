@@ -63,3 +63,23 @@ $lato: 			'Lato', sans-serif;
 %lato {
 	font-family: $lato;
 }
+
+%roboto {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+}
+
+%roboto-thin {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+}
+
+%roboto-light {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+}
+
+%roboto-med {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+}

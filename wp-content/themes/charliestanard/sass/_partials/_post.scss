@@ -12,30 +12,38 @@
 
 	// Text
 
-	h1, h2, h3, h4, h5, h6 {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
 		word-wrap: break-word;
 	}
 
-	p,
-	ol, ol li,
-	ul, ul li,
-	dl, dl dt, dl dd,
-	table td, table th,
-	address {
-		// Basic copy style
-	}
+	// p,
+	// ol,
+	// ol li,
+	// ul,
+	// ul li,
+	// dl,
+	// dl dt,
+	// dl dd,
+	// table td,
+	// table th,
+	// address {}
 
-	p {}
-	p strong,
-	li strong {}
+	// p {}
+	// p strong,
+	// li strong {}
 
-	blockquote {}
+	// blockquote {}
 
-	address {}
+	// address {}
 
-	dl {}
-	dl dt {}
-	dl dd {}
+	// dl {}
+	// dl dt {}
+	// dl dd {}
 
 	ol,
 	ul {
@@ -52,11 +60,11 @@
 		list-style-type: disc;
 	}
 
-	ol {}
-	ol li {}
+	// ol {}
+	// ol li {}
 
-	ul {}
-	ul li {}
+	// ul {}
+	// ul li {}
 
 	// Images
 
@@ -65,23 +73,23 @@
 		max-width: 100%;
 	}
 
-	img.aligncenter,
-	a img.aligncenter,
+	.aligncenter,
+	a .aligncenter,
 	.wp-caption.aligncenter {
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
 	}
 
-	img.alignleft,
-	a img.alignleft,
+	.alignleft,
+	a .alignleft,
 	.wp-caption.alignleft {
 		float: left;
-		margin: 0 16px 16px 0;
+		margin: 0 16px 16px;
 	}
 
-	img.alignright,
-	a img.alignright,
+	.alignright,
+	a .alignright,
 	.wp-caption.alignright {
 		float: right;
 		margin: 0 0 16px 16px;
@@ -89,21 +97,19 @@
 
 	// Image sizes
 
-	img.size-full {}
-	img.size-medium {}
+	// img.size-full {}
+	// img.size-medium {}
 
 	// Image captions
 
 	.wp-caption {
-		margin: 0 0 16px 0;
+		margin: 0 0 16px;
 		max-width: 100%;
-	}
 
-	.wp-caption img {
-		display: block;
+		img {
+			display: block;
+		}
 	}
-
-	.wp-caption .wp-caption-text {}
 
 	// Misc
 	iframe {
@@ -113,24 +119,24 @@
 }
 
 // Post body <article>
-.type-post {}
+// .type-post {}
 
 // Page content <article>
-.type-page {}
+// .type-page {}
 
 // Post excerpt <blockquote>
-.post-excerpt {}
+// .post-excerpt {}
 
 // Post heading content <header>
-.post-heading {}
+// .post-heading {}
 
-a.post-heading-img {}
+// a.post-heading-img {}
 
-.post-heading-meta {}
+// .post-heading-meta {}
 
 // Primary post body content
-.post-body {}
+// .post-body {}
 
-.post-tags {}
+// .post-tags {}
 
-.post-meta {}
+// .post-meta {}

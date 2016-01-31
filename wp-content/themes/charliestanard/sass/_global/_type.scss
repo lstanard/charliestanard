@@ -12,14 +12,44 @@ html {
 }
 
 body {
-	@include fslh(1.5, 2.2);
+	font-size: 1.5rem;
+	line-height: 2.2rem;
+}
+
+//  -----------------------------------------------------------------
+//	DEFAULTS: Link styles
+//  -----------------------------------------------------------------
+
+a:link,
+a:visited {
+	@extend %roboto-med;
+	cursor: pointer;
+	color: $blue;
+	text-decoration: none;
+
+	transition: color .15s;
+}
+
+a:hover,
+a:active {
+	color: $green;
+	text-decoration: none;
+}
+
+a:focus {
+	outline: none;
 }
 
 //  -----------------------------------------------------------------
 //	HEADLINES
 //  -----------------------------------------------------------------
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	a:link,
 	a:visited {
 		text-decoration: none;
@@ -27,58 +57,75 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	margin: 0 0 15px 0;
+	@extend %roboto;
 
-	@extend %aleo;
-	font-size: 5.6rem;
-	line-height: 6.2rem;
-	color: $dark-grey;
-}
-
-h1 + p {
 	margin: 0;
 
-	@extend %aleo;
 	font-size: 2.4rem;
 	line-height: 2.8rem;
-	color: $dark-grey50;
+	color: $dark-grey;
+
+	+ p {
+		@extend %roboto-light;
+
+		margin: 0;
+
+		font-size: 1.5rem;
+		line-height: 2.8rem;
+		color: $dark-grey50;
+	}
 }
 
-h2 {}
-h3 {}
-h4 {}
-h5 {}
-h6 {}
+h2 {
+	@extend %roboto-med;
+
+	color: $green;
+	font-size: 2.2rem;
+	line-height: 2.6rem;
+}
 
 //  -----------------------------------------------------------------
 //	PARAGRAPH & LIST STYLES
 //  -----------------------------------------------------------------
 
-p, ul li, ol li {
-	@extend %libre;
-	@include fslh(1.5, 2.2);
+p,
+ul li,
+ol li {
+	@extend %roboto-light;
+
 	color: $body-copy;
+	font-size: 1.6rem;
+	line-height: 2.2rem;
+}
+
+.intro {
+	@extend %roboto;
+
+	margin-top: 45px;
+
+	font-size: 1.8rem;
+	line-height: 2.8rem;
 }
 
 p {
-	margin: 0 0 15px 0;
+	margin: 0 0 15px;
 }
-
-p strong {}
 
 em {
 	font-style: italic;
 }
 
 small {
-	@include fslh(1.2, 1.8);
+	font-size: 1.2rem;
+	line-height: 1.8rem;
 }
 
 //  -----------------------------------------------------------------
 //	MISC
 //  -----------------------------------------------------------------
 
-sub, sup {
+sub,
+sup {
 	font-size: .5em;
 	line-height: 0;
 	position: relative;
@@ -86,9 +133,9 @@ sub, sup {
 }
 
 sup {
-	top: -0.5em;
+	top: -.5em;
 }
 
 sub {
-	bottom: -0.25em;
+	bottom: -.25em;
 }

@@ -14,6 +14,7 @@
     "grunt-newer": "^1.1.1",
     "grunt-postcss": "^0.7.1",
     "grunt-sass": "^1.1.0",
+    "grunt-scss-lint": "^0.3.8",
     "load-grunt-tasks": "^3.4.0",
     "pixrem": "^3.0.0",
     "postcss-cssnext": "^2.4.0"

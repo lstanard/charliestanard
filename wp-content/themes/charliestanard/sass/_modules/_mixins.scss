@@ -2,40 +2,36 @@
 //	MIXINS: Media queries
 //  -----------------------------------------------------------------
 
-@mixin respond($media, $type: "min") {
-	@if $media == "xs" {
-		@media ($type+"-width": $break-xs) {
+@mixin respond($media, $type: 'min') {
+	@if $media == 'xs' {
+		@media ($type+'-width': $break-xs) {
 			@content;
 		}
-	}
-	@else if $media == "sm" {
-		@media ($type+"-width": $break-sm) {
+	} @else if $media == 'sm' {
+		@media ($type+'-width': $break-sm) {
 			@content;
 		}
-	}
-	@else if $media == "md" {
-		@media ($type+"-width": $break-md) {
+	} @else if $media == 'md' {
+		@media ($type+'-width': $break-md) {
 			@content;
 		}
-	}
-	@else if $media == "lg" {
-		@media ($type+"-width": $break-lg) {
+	} @else if $media == 'lg' {
+		@media ($type+'-width': $break-lg) {
 			@content;
 		}
-	}
-	@else {
-		@media ($type+"-width": $media) {
+	} @else {
+		@media ($type+'-width': $media) {
 			@content;
 		}
 	}
 
 }
 
-@mixin respond-minmax($min,$max) {
-    @media (min-width:$min) and (max-width: $max) {
-    	@content;
-    }
- }
+@mixin respond-minmax($min, $max) {
+	@media (min-width: $min) and (max-width: $max) {
+		@content;
+	}
+}
 
 @mixin retina {
 	@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
@@ -66,19 +62,19 @@
 	width: 100%;
 }
 
-@mixin section ($paddingTop:60px, $paddingBottom:45px, $sidePadding:true, $useDefaultPadding:true) {
+@mixin section ($padding-top:60px, $padding-bottom:45px, $side-padding:true, $use-default-padding:true) {
 	@include wrap;
 	@extend %cf;
-	padding-top: $paddingTop;
-	padding-bottom: $paddingBottom;
+	padding-top: $padding-top;
+	padding-bottom: $padding-bottom;
 
-	@if $sidePadding == true {
+	@if $side-padding == true {
 		padding-right: 3%;
 		padding-left: 3%;
 	}
 
 	@include respond($break-phone2) {
-		@if $useDefaultPadding == true {
+		@if $use-default-padding == true {
 			padding-top: 90px;
 			padding-bottom: 60px;
 		}
@@ -89,7 +85,7 @@
 		padding-left: 15px;
 		padding-right: 15px;
 
-		@if $useDefaultPadding == true {
+		@if $use-default-padding == true {
 			padding-top: 120px;
 			padding-bottom: 90px;
 		}
@@ -97,19 +93,19 @@
 }
 
 // When passing in width values do not include "px" at the end
-@mixin column($width:480, $parentWidth:940, $marginLeft:0, $marginRight:0, $paddingTop:30px, $paddingBottom:30px, $breakPoint:$break-phone2) {
+@mixin column($width:480, $parent-width:940, $margin-left:0, $margin-right:0, $padding-top:30px, $padding-bottom:30px, $break-point:$break-phone2) {
 	min-height: 1px;
 	padding-bottom: 0;
 	padding-top: 0;
 	position: relative;
 
-	@include respond($breakPoint) {
+	@include respond($break-point) {
 		float: left;
-		margin-left: percentage($marginLeft/$parentWidth);
-		margin-right: percentage($marginRight/$parentWidth);
-		padding-top: $paddingTop;
-		padding-bottom: $paddingBottom;
-		width: percentage($width/$parentWidth);
+		margin-left: percentage($margin-left/$parent-width);
+		margin-right: percentage($margin-right/$parent-width);
+		padding-top: $padding-top;
+		padding-bottom: $padding-bottom;
+		width: percentage($width/$parent-width);
 	}
 }
 
@@ -117,24 +113,7 @@
 //	MIXINS: Type
 //  -----------------------------------------------------------------
 
-@mixin font-size($sizeValue: 1.6) {
-	font-size: ($sizeValue * 10) + px;
-	font-size: $sizeValue + rem;
-}
-
-@mixin line-height($sizeValue: 2.2) {
-	line-height: ($sizeValue * 10) + px;
-	line-height: $sizeValue + rem;
-}
-
-@mixin fslh($sizeValue: 1.6, $lineHeight: 2.2) {
-	font-size: ($sizeValue * 10) + px;
-	font-size: $sizeValue + rem;
-	line-height: ($lineHeight * 10) + px;
-	line-height: $lineHeight + rem;
-}
-
-@mixin button($fontSize: 1.5, $lineHeight: 3.5, $height: 38px, $color: $primary-color, $secondaryColor: $primary-color-dark, $ghost: false, $arrow: false, $padding: 22px) {
+@mixin button($font-size: 1.5, $line-height: 3.5, $height: 38px, $color: $primary-color, $secondary-color: $primary-color-dark, $ghost: false, $arrow: false, $padding: 22px) {
 
 	display: inline-block;
 	position: relative;
@@ -148,12 +127,12 @@
 	padding-top: 12px;
 	width: auto;
 
-	@include font-size($fontSize);
+	@include font-size($font-size);
 	@include line-height(1.5);
 	background-color: $color;
 	border: 1px solid $color;
 	border-radius: 0;
-	color: $secondaryColor;
+	color: $secondary-color;
 	cursor: pointer;
 	font-weight: 700;
 	outline: none;
@@ -163,7 +142,7 @@
 
 	&:hover,
 	&:active {
-		background-color: $secondaryColor;
+		background-color: $secondary-color;
 		border: 1px solid $color;
 		color: $color;
 	}
@@ -178,7 +157,7 @@
 		&:hover,
 		&:active {
 			background-color: $color;
-			color: $secondaryColor;
+			color: $secondary-color;
 		}
 	}
 
@@ -188,7 +167,7 @@
 		&:after {
 			@include font-size(1.8);
 			bottom: 13px;
-			content: "\203a";
+			content: '\203a';
 			display: block;
 			position: absolute;
 			right: 18px;
@@ -200,16 +179,12 @@
 //	MIXINS: Image sprites
 //  -----------------------------------------------------------------
 
-/*
+// 1. Mixins originally generated by spritesmith, but with a fix to account for the sprite SASS' relative path to the images directory being incorrect when compiled to CSS and the site.css relative path to the images directory
 
-	1. Mixins originally generated by spritesmith, but with a fix to account for the sprite SASS' relative path to the images directory being incorrect when compiled to CSS and the site.css relative path to the images directory
+// 	Generated: ../../images (since _sprites.scss two directories down from root)
+// 	Correct: ../images (since site.css one directory down from root)
 
-		Generated: ../../images (since _sprites.scss two directories down from root)
-		Correct: ../images (since site.css one directory down from root)
-
-	2. 1x-scaled sprites do not create coordinates as precise as 2x / 2
-
-*/
+// 2. 1x-scaled sprites do not create coordinates as precise as 2x / 2
 
 @mixin sprite-width($sprite) {
 	width: nth($sprite, 5) / 2;

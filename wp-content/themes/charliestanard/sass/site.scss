@@ -1,25 +1,24 @@
-@import "_vendor/_normalize";
+@import '_vendor/normalize';
 
 //  -----------------------------------------------------------------
 //	SASS MIXINS, VARIABLES AND MISC FUNCTIONS
 //  -----------------------------------------------------------------
 
-@import "_modules/_variables";
-@import "_modules/_mixins";
-@import "_modules/_sprites-2x";
-@import "_modules/_utility";
-@import "_modules/_fonts";
+@import '_modules/variables';
+@import '_modules/mixins';
+@import '_modules/sprites-2x';
+@import '_modules/utility';
+@import '_modules/fonts';
 
 //  -----------------------------------------------------------------
 //	IMPORTS
 //  -----------------------------------------------------------------
 
-@import "_global/_defaults";
-@import "_global/_type";
-@import "_global/_layout";
-@import "_global/_buttons";
-@import "_global/_elements";
-@import "_global/_forms";
+@import '_global/type';
+@import '_global/layout';
+@import '_global/buttons';
+@import '_global/elements';
+@import '_global/forms';
 
 //  -----------------------------------------------------------------
 //	VENDOR PLUGINS
@@ -29,23 +28,17 @@
 //	SECTIONS
 //  -----------------------------------------------------------------
 
-@import "_partials/_header";
-@import "_partials/_nav";
-@import "_partials/_footer";
-@import "_partials/_post";
-@import "_partials/_sidebar";
-@import "_partials/_comments";
-@import "_partials/_pagination";
+@import '_partials/header';
+@import '_partials/nav';
+@import '_partials/footer';
+@import '_partials/post';
+@import '_partials/sidebar';
+@import '_partials/comments';
+@import '_partials/pagination';
 
 //  -----------------------------------------------------------------
 //	PAGES
 //  -----------------------------------------------------------------
 
-@import "_pages/_home";
-@import "_pages/_pages";
-
-//  -----------------------------------------------------------------
-//	LEGACY BROWSER SUPPORT
-//  -----------------------------------------------------------------
-
-@import "_global/_legacy";
+@import '_pages/home';
+@import '_pages/pages';

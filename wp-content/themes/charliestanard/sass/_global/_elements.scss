@@ -1,3 +1,26 @@
 //  -----------------------------------------------------------------
 //	GLOBAL ELEMENTS
 //  -----------------------------------------------------------------
+
+hr {
+	height: 0;
+	width: 45px;
+
+	margin: 30px 0 60px;
+
+	background: transparent;
+	border: 0;
+	border-top: 2px solid $dark-grey10;
+
+	&.red {
+		border-color: $red;
+	}
+
+	&.blue {
+		border-color: $blue;
+	}
+
+	&.green {
+		border-color: $green;
+	}
+}
