@@ -19,7 +19,7 @@ function my_mce_before_init( $settings ) {
 		array(
 			'title' => 'Button: Custom Outline Button',
 			'selector' => 'a',
-			'classes' => 'btn-custom-outline'
+			'classes' => 'btn-outline'
 		),
 		array(
 			'title' => 'Text: Intro copy',

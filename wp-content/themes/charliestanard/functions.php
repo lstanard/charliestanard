@@ -85,32 +85,6 @@ function custom_navigation_menus() {
 add_action('init', 'custom_navigation_menus');
 
 /*------------------------------------*\
-	Register Sidebars
-\*------------------------------------*/
-
-if (function_exists('register_sidebar')) {
-	register_sidebar(array(
-		'name' => 'Widget Area 1',
-		'description' => 'Description for this widget-area...',
-		'id' => 'widget-area-1',
-		'before_widget' => '<div id="%1$s" class="%2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h3>',
-		'after_title' => '</h3>'
-	));
-
-	register_sidebar(array(
-		'name' => 'Widget Area 2',
-		'description' => 'Description for this widget-area...',
-		'id' => 'widget-area-2',
-		'before_widget' => '<div id="%1$s" class="%2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h3>',
-		'after_title' => '</h3>'
-	));
-}
-
-/*------------------------------------*\
 	Debug
 	Codex: https://codex.wordpress.org/Debugging_in_WordPress
 
@@ -136,34 +110,10 @@ if (!function_exists('debug_log')) {
 	Includes
 \*------------------------------------*/
 
-// Plugins
-
-// The following file provides advanced support for managing the admin menu items. For reference see http://wordpress.stackexchange.com/questions/1216/changing-the-order-of-admin-menu-sections and https://gist.github.com/mikeschinkel/792b7aa5b695d1092520
-require_once('inc/wp-admin-menu-classes.php');
-
-// Misc. utility functions, actions and filters
 require_once('inc/utility.php');
-
-// Custom MCE buttons
 require_once('inc/mce.php');
-
-// Custom widgets
-require_once('inc/widgets.php');
-
-// Custom shortcodes
-require_once('inc/shortcodes.php');
-
-// Custom post type and taxonomies
 require_once('inc/post-types.php');
-
-// Custom fields
-require_once('inc/custom-fields.php');
-
-// Theme customizer options
-require_once('inc/customizer.php');
-
 require_once('inc/admin/theme-settings.php');
-
 require_once('inc/work.php');
 
 ?>

@@ -1,9 +1,22 @@
 module.exports = function(grunt) {
 
+	/*
+	 *
+	 *	Path variables
+	 *	---
+	 *
+	 */
+
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 
-		// Scripts
+		/*
+		 *
+		 *	Scripts
+		 *	---
+		 *
+		 */
+
 		jshint: {
 			all: ['Gruntfile.js', 'js/src/*.js']
 		},
@@ -22,7 +35,13 @@ module.exports = function(grunt) {
 			}
 		},
 
-		// Styles
+		/*
+		 *
+		 *	Styles
+		 *	---
+		 *
+		 */
+
 		scsslint: {
 			options: {
 				config: '.scss-lint.yml',
@@ -81,9 +100,20 @@ module.exports = function(grunt) {
 			}
 		},
 
-		// Images
+		/*
+		 *
+		 *	Images
+		 *	---
+		 *
+		 */
 
-		// Misc
+		/*
+		 *
+		 *	Copy
+		 *	---
+		 *
+		 */
+
 		copy: {
 			bower_components: {
 				files: {
@@ -117,7 +147,13 @@ module.exports = function(grunt) {
 
 	});
 
-	// Tasks
+	/*
+	 *
+	 *	Tasks
+	 *	---
+	 *
+	 */
+
 	grunt.registerTask('style', [
 		'scsslint',
 		'sass',
@@ -147,7 +183,13 @@ module.exports = function(grunt) {
 		'watch'
 	]);
 
-	// Load plugins
+	/*
+	 *
+	 *	Load plugins
+	 *	---
+	 *
+	 */
+
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-compress');
 	grunt.loadNpmTasks('grunt-contrib-concat');

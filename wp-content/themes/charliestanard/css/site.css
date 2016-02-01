@@ -353,16 +353,6 @@ td,
 th {
 	padding: 0; }
 
-/*
-SCSS variables are information about icon's compiled state, stored under its original file name
-
-.icon-home {
-  width: $icon-home-width;
-}
-
-The large array-like variables contain all information about a single icon
-$icon-home: x y offset_x offset_y width height total_width total_height image_path;
-*/
 .type-post,
 .type-page,
 .post-excerpt {
@@ -408,12 +398,12 @@ h1, .intro {
 
 h1 + p, h3, p,
 ul li,
-ol li {
+ol li, .nav ul a {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 300; }
 
 a:link,
-a:visited, h2, .nav ul a {
+a:visited, h2 {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 500; }
 
@@ -436,7 +426,7 @@ html {
 	position: relative;
 	margin: 0 auto;
 	min-height: 100vh;
-	padding: 0;
+	padding: 0 0 1px;
 	width: 100%;
 	background-color: #fff; }
 
@@ -472,11 +462,11 @@ body {
 
 a:link,
 a:visited {
+	-webkit-transition: color .15s;
+	transition: color .15s;
 	color: #66c9c5;
 	cursor: pointer;
-	text-decoration: none;
-	-webkit-transition: color .15s;
-	transition: color .15s; }
+	text-decoration: none; }
 
 a:hover,
 a:active {
@@ -589,6 +579,37 @@ sup {
 sub {
 	bottom: -.25em; }
 
+.btn-outline {
+	display: inline-block;
+	position: relative;
+	-webkit-transition: color 0.1s, border-color 0.1s;
+	transition: color 0.1s, border-color 0.1s;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	min-height: 38px;
+	padding: 12px 22px;
+	width: auto;
+	background: none;
+	border: 2px solid #66c9c5;
+	color: #66c9c5; }
+	.btn-outline:after {
+		content: '';
+		display: none;
+		z-index: -1;
+		left: 0;
+		position: absolute;
+		top: 0;
+		-webkit-transition: height 0.1s ease-in-out;
+		transition: height 0.1s ease-in-out;
+		height: 0;
+		width: 100%;
+		background-color: #2cc990; }
+	.btn-outline:hover, .btn-outline:active {
+		background-color: #2cc990;
+		border-color: #2cc990;
+		color: #fff; }
+
 hr {
 	height: 0;
 	margin: 30px auto 60px;
@@ -621,7 +642,7 @@ form select {
 	text-align: center; }
 	.nav ul li {
 		display: inline-block;
-		margin: 0 30px 10px; }
+		margin: 0 30px; }
 	.nav ul a {
 		color: #e3e3e3;
 		text-decoration: none; }

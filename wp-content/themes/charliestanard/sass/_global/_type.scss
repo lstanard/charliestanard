@@ -24,11 +24,11 @@ a:link,
 a:visited {
 	@extend %roboto-med;
 
+	transition: color .15s;
+
 	color: $blue;
 	cursor: pointer;
 	text-decoration: none;
-
-	transition: color .15s;
 }
 
 a:hover,
