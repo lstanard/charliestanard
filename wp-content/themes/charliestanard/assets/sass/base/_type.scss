@@ -20,20 +20,18 @@ body {
 //	DEFAULTS: Link styles
 //  -----------------------------------------------------------------
 
-a:link,
-a:visited {
+a {
 	@extend %roboto-med;
 
-	transition: color .15s;
+	transition: color .05s;
 
-	color: $blue;
+	color: $primary-color;
 	cursor: pointer;
 	text-decoration: none;
 }
 
-a:hover,
-a:active {
-	color: $green;
+a:hover {
+	color: $secondary-color;
 	text-decoration: none;
 }
 
@@ -60,23 +58,7 @@ h6 {
 h1 {
 	@extend %roboto;
 
-	margin: 0;
-
-	color: $dark-grey;
-	font-size: 3rem;
-	line-height: 3.6rem;
-	text-align: center;
-
-	+ p {
-		@extend %roboto-light;
-
-		margin: 0;
-
-		color: $dark-grey50;
-		font-size: 1.5rem;
-		line-height: 2.8rem;
-		text-align: center;
-	}
+	margin: 0 0 45px 0;
 }
 
 h2 {
@@ -84,9 +66,9 @@ h2 {
 
 	margin: 15px 0 45px;
 
-	color: $green;
-	font-size: 2.2rem;
-	line-height: 2.6rem;
+	color: $secondary-color;
+	font-size: 2.4rem;
+	line-height: 2.8rem;
 	text-align: center;
 }
 
@@ -96,7 +78,7 @@ h3 {
 	margin: 5px 0 10px;
 
 	color: $dark-grey;
-	font-size: 1.6rem;
+	font-size: 2rem;
 	line-height: 2.4rem;
 }
 
@@ -111,7 +93,7 @@ ol li {
 
 	color: $body-copy;
 	font-size: 1.6rem;
-	line-height: 2.2rem;
+	line-height: 2.5rem;
 }
 
 .intro {
@@ -121,6 +103,13 @@ ol li {
 	line-height: 2.8rem;
 	// TODO: Not sure whether or not I like the indent
 	text-indent: 60px;
+}
+
+.super {
+	margin: 0 0 8px;
+
+	color: $super-copy;
+	font-size: 1.6rem;
 }
 
 p {

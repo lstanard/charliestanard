@@ -1,0 +1,87 @@
+//  -----------------------------------------------------------------
+//	MIXINS: Media queries
+//  -----------------------------------------------------------------
+
+@mixin respond($media, $type: 'min') {
+	@if $media == 'xs' {
+		@media ($type+'-width': $break-xs) {
+			@content;
+		}
+	} @else if $media == 'sm' {
+		@media ($type+'-width': $break-sm) {
+			@content;
+		}
+	} @else if $media == 'md' {
+		@media ($type+'-width': $break-md) {
+			@content;
+		}
+	} @else if $media == 'lg' {
+		@media ($type+'-width': $break-lg) {
+			@content;
+		}
+	} @else {
+		@media ($type+'-width': $media) {
+			@content;
+		}
+	}
+}
+
+//  -----------------------------------------------------------------
+//	MIXINS: Button
+//  -----------------------------------------------------------------
+
+@mixin btn($type: 'outline', $color: $primary-color, $hover-color: $secondary-color) {
+	$btn-trans-speed: .1s;
+
+	display: inline-block;
+	position: relative;
+
+	transition: color $btn-trans-speed,
+				border-color $btn-trans-speed;
+
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px 22px 8px 22px;
+	width: auto;
+
+	background-color: $color;
+	border-bottom: 3px solid darken($color, 10%);
+	border-radius: 2px;
+
+	@extend %roboto-med;
+	color: #fff;
+	line-height: 20px;
+
+	&:after {
+		content: '';
+		display: none;
+		z-index: -1;
+
+		left: 0;
+		position: absolute;
+		top: 0;
+
+		transition: height $btn-trans-speed ease-in-out;
+
+		height: 0;
+		width: 100%;
+
+		background-color: $hover-color;
+	}
+
+	&:hover,
+	&:active {
+		background-color: $hover-color;
+		border-color: $hover-color;
+
+		color: #fff;
+	}
+
+	@if $type == 'outline' {
+		background: none;
+		border: 2px solid $color;
+
+		color: $color;
+	}
+}

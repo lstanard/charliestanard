@@ -1,0 +1,115 @@
+//  -----------------------------------------------------------------
+//	PAGE: Project
+//  -----------------------------------------------------------------
+
+.single-project .main-wrap {
+	padding: 0 5%;
+	width: 100%;
+}
+
+.type-project {
+	@extend %cf;
+}
+
+.project-preview {
+	display: block;
+	overflow: hidden;
+
+	position: relative;
+
+	margin: 0 0 30px 0;
+
+	cursor: pointer;
+
+	text-align: center;
+
+	img {
+		transition: all .4s $ease-out-quint;
+
+		height: auto;
+		max-width: 100%;
+
+		border: 10px solid $tile-border;
+	}
+
+	figcaption {
+		align-items: center;
+		display: flex;
+
+		left: 0;
+		position: absolute;
+		top: 0;
+
+		transition: all .4s $ease-out-quint;
+
+		height: 100%;
+		width: 100%;
+	}
+
+	a {
+		transition: all .4s $ease-out-quint;
+
+		opacity: 0;
+
+		text-transform: uppercase;
+	}
+}
+
+.project-preview:hover {
+
+	img {
+		filter: blur(1.8px);
+		transform: scale(1.1);
+	}
+
+	figcaption {
+		background-color: rgba($blue, .8);
+	}
+
+	a {
+		opacity: 1;
+	}
+}
+
+.project-details {
+	margin: 0 0 30px 0;
+}
+
+.project-body {
+	margin: 0 0 45px;
+}
+
+.project-tags {
+	max-width: 260px;
+
+	a {
+		display: inline-block;
+
+		margin: 0 3px 2px 0;
+		padding: 3px 6px;
+
+		background-color: $project-tag-bg;
+
+		@extend %roboto-light;
+		color: #fff;
+		font-size: 1.2rem;
+		line-height: 1.6rem;
+	}
+}
+
+@include respond($break-tablet1) {
+
+	.project-preview {
+		float: left;
+
+		width: percentage(2/3);
+	}
+
+	.project-details {
+		float: left;
+
+		padding: 30px 0 0 60px;
+		width: percentage(1/3);
+	}
+
+}

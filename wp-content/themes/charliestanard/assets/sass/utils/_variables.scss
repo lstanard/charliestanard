@@ -28,18 +28,24 @@ $break-desktop2:				1210px;
 //
 //	Assign hex values a color name, then reference that color name
 //	below using a functional variable name
+//
+//	darken($base-color, 10%)
+//	lighten($base-color, 10%)
+//
 //  -----------------------------------------------------------------
 
 $red: 							#bc4505;
 $blue: 							#66c9c5;
-$green: 						#2cc990; // old #61bd45
-$yellow: 						#eee657; // old #ffc522
+$green: 						#2cc990;
+$yellow: 						#eee657;
 $light-grey: 					#f6f6f6;
 $dark-grey: 					#3a3a3a;
-$dark-grey60: 					#898989;
-$dark-grey50: 					#9c9c9c;
-$dark-grey40: 					#b0b0b0;
-$dark-grey10: 					#e3e3e3;
+
+// Shades
+$dark-grey60: 					lighten($dark-grey, 40%);
+$dark-grey50: 					lighten($dark-grey, 50%);
+$dark-grey40: 					lighten($dark-grey, 60%);
+$dark-grey30: 					lighten($dark-grey, 70%);
 
 //  -----------------------------------------------------------------
 //	FUNCTIONAL VARIABLES
@@ -50,15 +56,30 @@ $dark-grey10: 					#e3e3e3;
 
 $primary-color:					$blue;
 $secondary-color:				$green;
+
+// Copy & headlines
 $body-copy: 					$dark-grey;
 $footer-copy:					$dark-grey40;
-$nav-link:						$dark-grey10;
+$nav-link:						$dark-grey30;
+$excerpt-date:					$dark-grey40;
+$super-copy:					$dark-grey50;
+$hello-copy:					$dark-grey;
+$hello-sub-copy:				$dark-grey50;
+
+// Backgrounds
 $page-bg:						#fff;
+$project-tag-bg:				$green;
+
+// Borders
 $tile-border:					$light-grey;
+$ruler:							$dark-grey30;
 
 //  -----------------------------------------------------------------
 //	MISC VARIABLES
 //  -----------------------------------------------------------------
+
+$ease-in-cubic:					cubic-bezier(0.55, 0.055, 0.675, 0.19);
+$ease-out-quint:				cubic-bezier(0.23, 1, 0.32, 1);
 
 //  -----------------------------------------------------------------
 //	Z-INDEX VALUES

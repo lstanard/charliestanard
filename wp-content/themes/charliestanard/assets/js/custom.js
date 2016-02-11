@@ -10,21 +10,6 @@
 			sw = document.documentElement.clientWidth,
 			sh = document.documentElement.clientHeight;
 
-		function bodyHasClass(pageClass) {
-			var bodyClasses = $('body').attr('class').split(" ");
-			return $.inArray(pageClass, bodyClasses) >= 0 ? true : false;
-		}
-
-		// Instantiate mmenu mobile menu plugin
-		// $('#header-menu').mmenu({
-		// 	extensions: [ 'pageshadow' ]
-		// }, {
-		// 	clone: true,
-		// });
-
-		// Instantiate slicknav mobile menu plugin
-		// $('#header-menu > ul').slicknav();
-
 	});
 
 	$(window).load(function(){

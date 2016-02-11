@@ -1,5 +1,5 @@
 {
-  "name": "charliestanard",
+  "name": "charliestanard.com",
   "version": "1.0.0",
   "description": "Personal website WordPress theme",
   "devDependencies": {
@@ -13,6 +13,7 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-cssnano": "^2.0.1",
     "grunt-newer": "^1.1.1",
+    "grunt-notify": "^0.4.3",
     "grunt-php": "^1.5.1",
     "grunt-postcss": "^0.7.1",
     "grunt-sass": "^1.1.0",

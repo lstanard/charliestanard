@@ -1,0 +1,25 @@
+//  -----------------------------------------------------------------
+//	PARTIAL: POST
+//
+//	Shared formatting for post content, experts and pages
+//  -----------------------------------------------------------------
+
+// Post excerpts
+
+.post-excerpt {
+	margin: 0 0 30px;
+
+	h3 {
+		transition: all .2s $ease-out-quint;
+
+		margin: 0 0 5px;
+	}
+
+	h3:hover {
+		transform: translateX(8px);
+	}
+}
+
+.date {
+	color: $excerpt-date;
+}

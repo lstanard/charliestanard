@@ -4,12 +4,12 @@
 
 hr {
 	height: 0;
-	margin: 30px auto 60px;
+	margin: 60px auto;
 	width: 45px;
 
 	background: transparent;
 	border: 0;
-	border-top: 2px solid $dark-grey10;
+	border-top: 2px solid $ruler;
 
 	&.red {
 		border-color: $red;

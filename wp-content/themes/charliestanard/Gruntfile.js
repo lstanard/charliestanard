@@ -7,6 +7,19 @@ module.exports = function(grunt) {
 	 *
 	 */
 
+	var sassSrc = [
+			'assets/sass/*.scss',
+			'assets/sass/*/*.scss',
+			'!assets/sass/_vendor/*.scss',
+			'!assets/sass/base/_normalize.scss'
+		],
+		jsSrc = [
+			'Gruntfile.js',
+			'assets/js/*'
+		],
+		imgSrc = [];
+
+
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 
@@ -18,20 +31,28 @@ module.exports = function(grunt) {
 		 */
 
 		jshint: {
-			all: ['Gruntfile.js', 'js/src/*.js']
+			all: jsSrc
 		},
 
 		concat: {
 			dist: {
-				src: ['js/src/utility.js', 'js/src/custom.js'],
+				src: ['assets/js/utility.js', 'assets/js/custom.js'],
 				dest: 'js/site.js'
 			}
 		},
 
 		uglify: {
+			options: {
+				mangle: true
+			},
 			dist: {
-				src: ['js/site.js'],
-				dest: 'js/site.min.js'
+				files: [{
+					expand: true,
+					cwd: 'js',
+					src: ['*.js', '!*.min.js'],
+					dest: 'js',
+					ext: '.min.js'
+				}]
 			}
 		},
 
@@ -48,7 +69,7 @@ module.exports = function(grunt) {
 				colorizeOutput: true,
 			},
 			dist: {
-				src: ['sass/*.scss', 'sass/*/*.scss', '!sass/_vendor/*.scss', '!sass/_modules/_sprites-2x.scss']
+				src: sassSrc
 			}
 		},
 
@@ -62,7 +83,7 @@ module.exports = function(grunt) {
 			dist: {
 				files: [{
 					expand: true,
-					cwd: 'sass',
+					cwd: 'assets/sass',
 					src: ['*.scss'],
 					dest: 'css',
 					ext: '.css'
@@ -85,7 +106,7 @@ module.exports = function(grunt) {
 				]
 			},
 			dist: {
-				src: 'css/*.css' // can also use files: {'dest': ['src']}
+				src: 'css/*.css'
 			}
 		},
 
@@ -94,18 +115,15 @@ module.exports = function(grunt) {
 				sourceMap: true
 			},
 			dist: {
-				files: {
-					'css/site.min.css': ['css/site.css']
-				}
+				files: [{
+					expand: true,
+					cwd: 'css',
+					src: ['*.css', '!*.min.css'],
+					dest: 'css',
+					ext: '.min.css'
+				}]
 			}
 		},
-
-		/*
-		 *
-		 *	Images
-		 *	---
-		 *
-		 */
 
 		/*
 		 *
@@ -124,20 +142,27 @@ module.exports = function(grunt) {
 
 		watch: {
 			grunt: {
-				files: ['Gruntfile.js', '*.php'],
+				files: ['Gruntfile.js'],
+				tasks: ['default'],
+				options: {
+					livereload: true
+				}
+			},
+			php: {
+				files: ['*.php', 'partials/*.php'],
 				options: {
 					livereload: true
 				}
 			},
 			styles: {
-				files: ['sass/*.scss', 'sass/**/*.scss'],
+				files: sassSrc,
 				tasks: ['style'],
 				options: {
 					livereload: true
 				}
 			},
 			scripts: {
-				files: ['js/*.js', 'js/**/*.js'],
+				files: jsSrc,
 				tasks: ['script'],
 				options: {
 					livereload: true
@@ -173,13 +198,8 @@ module.exports = function(grunt) {
 		'script'
 	]);
 
-	grunt.registerTask('build', [
-		'style',
-		'script'
-	]);
-
 	grunt.registerTask('dev', [
-		'build',
+		'default',
 		'watch'
 	]);
 
@@ -190,16 +210,19 @@ module.exports = function(grunt) {
 	 *
 	 */
 
-	grunt.loadNpmTasks('grunt-contrib-copy');
-	grunt.loadNpmTasks('grunt-contrib-compress');
-	grunt.loadNpmTasks('grunt-contrib-concat');
-	grunt.loadNpmTasks('grunt-contrib-jshint');
-	grunt.loadNpmTasks('grunt-contrib-uglify');
-	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-scss-lint');
+	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-postcss');
 	grunt.loadNpmTasks('grunt-cssnano');
+
+	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
+
+	grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.loadNpmTasks('grunt-contrib-compress');
+	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-newer');
-	grunt.loadNpmTasks('grunt-sass');
-	grunt.loadNpmTasks('grunt-scss-lint');
+	grunt.loadNpmTasks('grunt-notify');
 
 };

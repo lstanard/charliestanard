@@ -1,0 +1,60 @@
+//  -----------------------------------------------------------------
+//	PARTIAL: HEADER
+//  -----------------------------------------------------------------
+
+.header .hello {
+	margin: 0;
+
+	color: $hello-copy;
+	font-size: 3.2rem;
+	line-height: 3.6rem;
+	text-align: center;
+
+	a {
+		// TODO: Not sure how I feel about this font
+		@extend %aleo-light;
+	}
+
+	+ p {
+		margin: 0;
+
+		@extend %roboto-light;
+		color: $hello-sub-copy;
+		font-size: 1.5rem;
+		line-height: 2.8rem;
+		text-align: center;
+	}
+}
+
+.home .header .hello {
+	font-size: 4rem;
+	line-height: 5.2rem;
+}
+
+.nav {
+
+	ul {
+		margin: 0 0 60px;
+		padding: 30px 0 0;
+
+		list-style: none;
+		text-align: center;
+	}
+
+	li {
+		display: inline-block;
+
+		margin: 0 30px;
+	}
+
+	a {
+		@extend %roboto-light;
+		color: $nav-link;
+		text-decoration: none;
+	}
+
+	a:hover {
+		// TODO: Add a top-border for hover/active effect
+		color: $secondary-color;
+	}
+}
