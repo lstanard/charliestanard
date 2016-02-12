@@ -5,7 +5,7 @@
 \*------------------------------------*/
 
 // Register Custom Post Type
-function projects_post_type() {
+function project_post_type() {
 
 	$labels = array(
 		'name'                  => 'Projects',
@@ -54,9 +54,9 @@ function projects_post_type() {
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
 	);
-	register_post_type( 'projects', $args );
+	register_post_type( 'project', $args );
 
 }
-add_action( 'init', 'projects_post_type', 0 );
+add_action( 'init', 'project_post_type', 0 );
 
 ?>

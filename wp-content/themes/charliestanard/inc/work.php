@@ -8,13 +8,12 @@ function display_work_posts() {
 
 	$args = array(
 		'posts_per_page' => -1,
-		'post_type'	=> 'projects',
+		'post_type'	=> 'project',
 		'orderby' => 'menu_order',
 		'order' => 'ASC'
 	);
 
 	$projects_array = get_posts($args);
-	// debug_log($projects_array);
 
 	?>
 

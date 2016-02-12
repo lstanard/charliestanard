@@ -9,6 +9,7 @@
 @import 'utils/mixins';
 @import 'utils/helpers';
 @import 'utils/fonts';
+@import 'utils/animations';
 
 @import 'base/normalize';
 @import 'base/type';
@@ -23,6 +24,7 @@
 @import 'components/forms';
 @import 'components/post';
 @import 'components/work-grid';
+@import 'components/project-nav';
 
 @import 'pages/home';
 @import 'pages/project';

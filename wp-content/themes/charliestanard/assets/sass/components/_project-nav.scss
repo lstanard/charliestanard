@@ -1,0 +1,26 @@
+//  -----------------------------------------------------------------
+//	Project prev/next links
+//  -----------------------------------------------------------------
+
+.project-nav {
+	margin: 30px 0 0 0;
+
+	text-align: center;
+
+	p {
+		display: block;
+
+		margin-bottom: 10px;
+	}
+}
+
+.project-nav-links {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+
+	[rel='prev'],
+	[rel='next'] {
+		margin: 0 15px;
+	}
+}

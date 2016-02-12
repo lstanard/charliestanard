@@ -10,6 +10,10 @@
 			sw = document.documentElement.clientWidth,
 			sh = document.documentElement.clientHeight;
 
+			$('.hello').on('mouseenter mouseleave', function() {
+				$(this).toggleClass('bounce');
+			});
+
 	});
 
 	$(window).load(function(){

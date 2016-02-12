@@ -20,9 +20,9 @@
 					<?php wp_nav_menu( array( 'theme_location' => 'Primary Navigation', 'items_wrap' => '%3$s' ) ); ?>
 				</ul>
 			</nav>
-			<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Hi, I&rsquo;m Charlie.</a></h1>
+			<p class="hello"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Hi, I&rsquo;m Charlie.</a></p>
 			<p>Interactive Designer &amp; Developer</p>
 			<hr />
 		</div>
 	</header>
-	<main role="main">
+	<main>

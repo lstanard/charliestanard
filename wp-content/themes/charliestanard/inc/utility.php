@@ -2,9 +2,15 @@
 
 /*------------------------------------*\
 	Utility Functions
-
-	TODO: Review function usage before including in final theme release
 \*------------------------------------*/
+
+function cs_get_project_url() {
+	if (function_exists('get_field')) {
+		global $post;
+		$project_url = get_field('project_url', $post->ID);
+		echo $project_url;
+	}
+}
 
 /*------------------------------------*\
 	Actions & Filters

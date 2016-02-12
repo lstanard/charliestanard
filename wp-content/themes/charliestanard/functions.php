@@ -6,25 +6,15 @@
 
 if (function_exists('add_theme_support')) {
 
-	// Add default posts and comments RSS feed links to head.
 	add_theme_support('automatic-feed-links');
-
-	// Enable support for post thumbnail (featured images) on posts and pages
 	add_theme_support('post-thumbnails');
-
-	// Switch default core markup for search form, comment form, and comments to output valid HTML5.
 	add_theme_support('html5', array(
 		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption',
 	));
-
-	// Add custom styles to MCE on post/page editor
 	add_editor_style(get_template_directory_uri() . '/css/editor-style.css');
-
-	// Allow WordPress to handle generating the <title> tag
 	add_theme_support('title-tag');
-
-	// Codex: http://codex.wordpress.org/Post_Thumbnails
 	add_image_size('project-thumb', 800, 571, false);
+
 }
 
 /*------------------------------------*\
@@ -33,22 +23,11 @@ if (function_exists('add_theme_support')) {
 
 function include_theme_scripts_styles() {
 
-	// Load primary theme stylesheet
 	wp_enqueue_style(
 		'site',
-		get_template_directory_uri() . '/css/site.css'
+		get_template_directory_uri() . '/css/main.css'
 	);
 
-	// Load jQuery dependent vendor scripts
-	wp_enqueue_script(
-		'custom-vendor-scripts',
-		get_template_directory_uri() . '/js/vendor-build.min.js',
-		array( 'jquery' ),
-		false,
-		true
-	);
-
-	// Load jQuery dependent custom site scripts
 	wp_enqueue_script(
 		'custom-site-scripts',
 		get_template_directory_uri() . '/js/site.js',
@@ -57,7 +36,6 @@ function include_theme_scripts_styles() {
 		true
 	);
 
-	// Load respond.js only in Internet Explorer 8 and below
 	if( preg_match('/(?i)msie [1-8]/', $_SERVER['HTTP_USER_AGENT']) ) {
 		wp_enqueue_script(
 			'respond-js',

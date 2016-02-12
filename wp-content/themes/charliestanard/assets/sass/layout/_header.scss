@@ -3,6 +3,8 @@
 //  -----------------------------------------------------------------
 
 .header .hello {
+	display: block;
+
 	margin: 0;
 
 	color: $hello-copy;
@@ -11,7 +13,6 @@
 	text-align: center;
 
 	a {
-		// TODO: Not sure how I feel about this font
 		@extend %aleo-light;
 	}
 
@@ -23,6 +24,11 @@
 		font-size: 1.5rem;
 		line-height: 2.8rem;
 		text-align: center;
+	}
+
+	&.bounce {
+		animation: bounce 1s;
+		animation-iteration-count: 1;
 	}
 }
 

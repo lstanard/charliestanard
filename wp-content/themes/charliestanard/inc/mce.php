@@ -17,9 +17,14 @@ function my_mce_before_init( $settings ) {
 	// Example:
 	$style_formats = array(
 		array(
-			'title' => 'Button: Custom Outline Button',
+			'title' => 'Button: Outline',
 			'selector' => 'a',
 			'classes' => 'btn-outline'
+		),
+		array(
+			'title' => 'Button: Solid',
+			'selector' => 'a',
+			'classes' => 'btn-solid'
 		),
 		array(
 			'title' => 'Text: Intro copy',
