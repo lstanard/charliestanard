@@ -4,6 +4,34 @@
 	Utility Functions
 \*------------------------------------*/
 
+function cs_get_blog_feed() {
+
+	$args = array(
+		'posts_per_page'	=> 5,
+		'post_type' 		=> 'post'
+	);
+
+	$posts_array = get_posts($args);
+
+	?>
+
+		<div class="blog-list">
+		<?php foreach ($posts_array as $post) :
+				$post_title = $post->post_title;
+				$post_date = get_the_date('j F Y', $post->ID);
+				$permalink = get_permalink($post);
+			 ?>
+			<div class="post-excerpt">
+				<h3><a href="<?php echo $permalink; ?>" title="<?php echo $post_title; ?>"><?php echo $post_title; ?></a></h3>
+				<p class="date"><?php echo $post_date; ?></p>
+			</div>
+		<?php endforeach ?>
+		</div>
+
+	<?php
+
+}
+
 function cs_get_project_url() {
 	if (function_exists('get_field')) {
 		global $post;
