@@ -44,6 +44,8 @@ wp-content/themes/*
 # wp-content/themes/priorities-usa/js/vendor-build.js
 # wp-content/themes/priorities-usa/webfontkit-20151102-223851/*
 wp-content/themes/charliestanard/bower_components/
+wp-content/themes/charliestanard/css/
+wp-content/themes/charliestanard/js/
 
 # ignore all files starting with . or ~
 .*
