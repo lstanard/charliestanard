@@ -92,6 +92,6 @@ require_once('inc/utility.php');
 require_once('inc/mce.php');
 require_once('inc/post-types.php');
 require_once('inc/admin/theme-settings.php');
-require_once('inc/work.php');
+require_once('inc/shortcodes.php');
 
 ?>

@@ -10,17 +10,57 @@
 
 	margin-left: -15px;
 	margin-right: -15px;
+}
 
-	.tile {
-		margin: 0 0 30px;
-		padding: 0 15px;
-		width: 50%;
-	}
+.work-grid__tile {
+	margin: 0 0 30px;
+	padding: 0 15px;
+	width: 100%;
+
+}
+
+.tile__preview {
+	@include project-preview();
 
 	img {
-		height: auto;
-		max-width: 100%;
-
 		border: 5px solid $tile-border;
+	}
+
+	figcaption {
+		text-align: center;
+
+	}
+
+	a {
+		align-items: center;
+		display: flex;
+
+		height: 100%;
+		width: 100%;
+
+		color: #fff;
+		font-size: 1.8rem;
+		text-align: center;
+	}
+
+	span {
+		transition: transform .4s $ease-out-quint;
+		transform: scale(1.2);
+
+		margin: 0 auto;
+	}
+
+	&:hover {
+
+		span {
+			transform: scale(1);
+		}
+	}
+}
+
+@include respond($break-tablet1) {
+
+	.work-grid__tile {
+		width: 50%;
 	}
 }

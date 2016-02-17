@@ -3,6 +3,7 @@
 //  -----------------------------------------------------------------
 
 .single-project .main-wrap {
+	max-width: none;
 	padding: 0 5%;
 	width: 100%;
 }
@@ -11,78 +12,40 @@
 	@extend %cf;
 }
 
-.project-preview {
-	display: block;
-	overflow: hidden;
-
-	position: relative;
-
-	margin: 0 0 30px 0;
-
-	cursor: pointer;
-
-	text-align: center;
+.project__preview {
+	@include project-preview();
 
 	img {
-		transition: all .4s $ease-out-quint;
-
-		height: auto;
-		max-width: 100%;
-
 		border: 10px solid $tile-border;
 	}
 
-	figcaption {
-		align-items: center;
-		display: flex;
-
-		left: 0;
-		position: absolute;
-		top: 0;
-
-		transition: all .4s $ease-out-quint;
-
-		height: 100%;
-		width: 100%;
-	}
-
 	a {
-		transition: all .4s $ease-out-quint;
-
-		opacity: 0;
+		transition: transform .4s $ease-out-quint;
+		transform: scale(1.2);
 
 		text-transform: uppercase;
 	}
-}
 
-.project-preview:hover {
+	&:hover {
 
-	img {
-		filter: blur(1.8px);
-		transform: scale(1.1);
-	}
-
-	figcaption {
-		background-color: rgba($blue, .8);
-	}
-
-	a {
-		opacity: 1;
+		a {
+			transform: scale(1);
+		}
 	}
 }
 
-.project-details {
+.project__details {
 	margin: 0 0 30px 0;
 }
 
-.project-body {
+.project__body {
 	margin: 0 0 45px;
 }
 
-.project-tags {
+.project__tags {
 	max-width: 260px;
 
-	a {
+	span {
 		display: inline-block;
 
 		margin: 0 3px 2px 0;
@@ -99,13 +62,13 @@
 
 @include respond($break-tablet1) {
 
-	.project-preview {
+	.project__preview {
 		float: left;
 
 		width: percentage(2/3);
 	}
 
-	.project-details {
+	.project__details {
 		float: left;
 
 		padding: 30px 0 0 60px;
