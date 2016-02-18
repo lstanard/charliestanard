@@ -1,69 +1,4 @@
 //  -----------------------------------------------------------------
-//	MIXINS: Project preview
-//  -----------------------------------------------------------------
-
-@mixin project-preview() {
-	display: block;
-	overflow: hidden;
-
-	position: relative;
-
-	margin: 0;
-
-	cursor: pointer;
-
-	text-align: center;
-
-	img {
-		display: block;
-
-		transition: all .4s $ease-out-quint;
-
-		height: auto;
-		max-width: 100%;
-	}
-
-	figcaption {
-		align-items: center;
-		display: flex;
-
-		left: 0;
-		position: absolute;
-		top: 0;
-
-		transition: all .4s $ease-out-quint;
-
-		height: 100%;
-		width: 100%;
-	}
-
-	a {
-		transition: all .4s $ease-out-quint;
-
-		opacity: 0;
-
-		text-decoration: none;
-	}
-
-	// Rollover effect
-	&:hover {
-
-		img {
-			filter: blur(1.8px);
-			transform: scale(1.1);
-		}
-
-		figcaption {
-			background-color: rgba($blue, .8);
-		}
-
-		a {
-			opacity: 1;
-		}
-	}
-}
-
-//  -----------------------------------------------------------------
 //	MIXINS: Media queries
 //  -----------------------------------------------------------------
 
@@ -148,5 +83,79 @@
 		border: 2px solid $color;
 
 		color: $color;
+	}
+}
+
+//  -----------------------------------------------------------------
+//	MIXINS: Project preview
+//  -----------------------------------------------------------------
+
+@mixin project-preview() {
+	display: block;
+
+	position: relative;
+
+	margin: 0;
+
+	cursor: pointer;
+	text-align: left;
+
+	img {
+		display: block;
+
+		height: auto;
+		max-width: 100%;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	@include respond($break-tablet1) {
+		overflow: hidden;
+
+		text-align: center;
+
+		figcaption {
+			align-items: center;
+			display: flex;
+
+			left: 0;
+			position: absolute;
+			top: 0;
+
+			transition: all .4s $ease-out-quint;
+
+			height: 100%;
+			width: 100%;
+
+			a {
+				transition: all .4s $ease-out-quint;
+
+				opacity: 0;
+			}
+		}
+
+		img {
+			transition: all .4s $ease-out-quint;
+		}
+
+		// Rollover effect
+		&:hover {
+			opacity: 1;
+
+			img {
+				filter: blur(1.8px);
+				transform: scale(1.1);
+			}
+
+			figcaption {
+				background-color: rgba($blue, .8);
+
+				a {
+					opacity: 1;
+				}
+			}
+		}
 	}
 }

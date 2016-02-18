@@ -4,7 +4,7 @@
 			the_post_thumbnail();
 		} ?>
 		<figcaption>
-			<a href="<?php cs_get_project_url(); ?>" class="btn-outline--white" target="_blank">Visit site</a>
+			<a href="<?php cs_get_project_url(); ?>" target="_blank">Visit site</a>
 		</figcaption>
 	</figure>
 	<div class="project__details">

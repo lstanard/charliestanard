@@ -58,7 +58,9 @@ function cs_project_grid_shortcode() {
 		$output .= '<div class="work-grid__tile">';
 		$output .= '<figure class="tile__preview">';
 		if (has_post_thumbnail($id)) {
+			$output .= '<a href="' . get_the_permalink($id) . '">';
 			$output .= get_the_post_thumbnail($id, 'project-thumb');
+			$output .= '</a>';
 		}
 		$output .= '<figcaption>';
 		$output .= '<a href="' . get_the_permalink($id) . '"><span>'. $project->post_title . '</span></a>';

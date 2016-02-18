@@ -18,7 +18,7 @@
 					<?php wp_nav_menu( array( 'theme_location' => 'Primary Navigation', 'items_wrap' => '%3$s' ) ); ?>
 				</ul>
 			</nav>
-			<p class="hello"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Hi, I&rsquo;m Charlie.</a></p>
+			<p class="header__hello"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Hi, I&rsquo;m Charlie.</a></p>
 			<p>Interactive Designer &amp; Developer</p>
 			<hr />
 		</div>

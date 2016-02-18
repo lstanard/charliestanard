@@ -4,7 +4,7 @@
 
 hr {
 	height: 0;
-	margin: 60px auto;
+	margin: 45px auto;
 	width: 45px;
 
 	background: transparent;
@@ -21,5 +21,9 @@ hr {
 
 	&.green {
 		border-color: $green;
+	}
+
+	@include respond($break-tablet1) {
+		margin: 60px auto;
 	}
 }

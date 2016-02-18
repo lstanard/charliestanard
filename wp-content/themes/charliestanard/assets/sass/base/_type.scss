@@ -103,9 +103,13 @@ ol li {
 
 .intro {
 	@extend %roboto;
-	font-size: 1.8rem;
-	line-height: 2.8rem;
-	text-indent: 60px;
+	text-indent: 30px;
+
+	@include respond($break-tablet1) {
+		font-size: 1.8rem;
+		line-height: 2.8rem;
+		text-indent: 60px;
+	}
 }
 
 .super {

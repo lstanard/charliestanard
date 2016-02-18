@@ -16,13 +16,10 @@
 	margin: 0 0 30px;
 	padding: 0 15px;
 	width: 100%;
-
 }
 
 .tile__preview {
 	@include project-preview();
-
-	margin: 0 0 30px 0;
 
 	img {
 		border: 5px solid $tile-border;
@@ -30,33 +27,17 @@
 
 	figcaption {
 		text-align: center;
-
 	}
 
 	a {
 		align-items: center;
 		display: flex;
 
-		height: 100%;
-		width: 100%;
-
-		color: #fff;
 		font-size: 1.8rem;
-		text-align: center;
 	}
 
 	span {
-		transition: transform .4s $ease-out-quint;
-		transform: scale(1.2);
-
-		margin: 0 auto;
-	}
-
-	&:hover {
-
-		span {
-			transform: scale(1);
-		}
+		margin: 15px auto;
 	}
 }
 
@@ -64,5 +45,28 @@
 
 	.work-grid__tile {
 		width: 50%;
+	}
+
+	.tile__preview {
+		margin: 0 0 30px 0;
+	}
+
+	.tile__preview a {
+		height: 100%;
+		width: 100%;
+
+		color: #fff;
+		text-align: center;
+	}
+
+	.tile__preview span {
+		transition: transform .4s $ease-out-quint;
+		transform: scale(1.2);
+	}
+
+	.tile__preview:hover span {
+		transform: scale(1);
+
+		margin: 0 auto;
 	}
 }

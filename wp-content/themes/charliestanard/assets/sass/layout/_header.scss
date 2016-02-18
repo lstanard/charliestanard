@@ -2,7 +2,7 @@
 //	PARTIAL: HEADER
 //  -----------------------------------------------------------------
 
-.header .hello {
+.header__hello {
 	display: block;
 
 	margin: 0;
@@ -34,15 +34,10 @@
 	}
 }
 
-.home .header .hello {
-	font-size: 4rem;
-	line-height: 5.2rem;
-}
-
 .nav {
 
 	ul {
-		margin: 0 0 60px;
+		margin: 0 0 30px;
 		padding: 30px 0 0;
 
 		list-style: none;
@@ -58,10 +53,23 @@
 	a {
 		@extend %roboto-light;
 		color: $nav-link;
+		font-size: 1.8rem;
 		text-decoration: none;
 	}
 
 	a:hover {
 		color: $secondary-color;
 	}
+}
+
+@include respond($break-tablet1) {
+
+	.nav ul {
+		margin-bottom: 60px;
+	}
+
+	.nav a {
+		font-size: 1.6rem;
+	}
+
 }

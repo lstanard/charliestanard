@@ -3,12 +3,19 @@
 //  -----------------------------------------------------------------
 
 .footer {
-	margin: 90px 0 0 0;
+	margin: 30px 0 0 0;
 	padding: 15px 0 30px;
 
 	p {
 		color: $footer-copy;
 		font-size: 1.2rem;
 		line-height: 1.8rem;
+	}
+}
+
+@include respond($break-tablet1) {
+
+	.footer {
+		margin: 90px 0 0 0;
 	}
 }
