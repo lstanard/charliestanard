@@ -23,7 +23,7 @@ function cs_blog_feed_shortcode() {
 		$post_date = get_the_date('j F Y', $post->ID);
 		$permalink = get_permalink($post);
 
-		$output .= '<div class="post-excerpt">';
+		$output .= '<div class="post__excerpt">';
 		$output .= '<h3><a href="' . $permalink . '" title="' . $post_title . '">' . $post_title . '</a></h3>';
 		$output .= '<p class="date">' . $post_date . '</p>';
 		$output .= '</div>';

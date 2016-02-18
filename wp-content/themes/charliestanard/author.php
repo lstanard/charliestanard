@@ -2,7 +2,5 @@
 
 	<h1>Author archives for <?php echo get_the_author(); ?></h1>
 	<?php get_template_part('loop'); ?>
-	<?php get_template_part('pagination'); ?>
-	<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

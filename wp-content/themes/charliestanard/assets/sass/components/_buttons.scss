@@ -15,6 +15,10 @@
 	}
 }
 
+.btn-outline--primary {
+	@include btn('outline', $primary-color, $primary-color);
+}
+
 .btn-solid,
 .nav-btn a {
 	@include btn('solid');

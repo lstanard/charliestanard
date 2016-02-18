@@ -23,7 +23,6 @@ body {
 a {
 	transition: color .05s;
 
-	@extend %roboto-med;
 	color: $primary-color;
 	cursor: pointer;
 	text-decoration: none;
@@ -58,7 +57,10 @@ h1 {
 	margin: 0 0 45px 0;
 
 	@extend %roboto;
+	color: $primary-headline;
 	line-height: 3rem;
+
+	text-align: center;
 }
 
 h2 {
@@ -68,7 +70,6 @@ h2 {
 	color: $secondary-color;
 	font-size: 2.4rem;
 	line-height: 2.8rem;
-	text-align: center;
 }
 
 h3 {
@@ -77,6 +78,13 @@ h3 {
 	@extend %roboto-light;
 	color: $dark-grey;
 	font-size: 2rem;
+	line-height: 2.4rem;
+}
+
+h4 {
+	@extend %roboto-med;
+	color: $secondary-color;
+	font-size: 1.8rem;
 	line-height: 2.4rem;
 }
 
@@ -97,7 +105,6 @@ ol li {
 	@extend %roboto;
 	font-size: 1.8rem;
 	line-height: 2.8rem;
-	// TODO: Not sure whether or not I like the indent
 	text-indent: 60px;
 }
 

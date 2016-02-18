@@ -12,6 +12,30 @@ function cs_get_project_url() {
 	}
 }
 
+function cs_get_posts_by_year() {
+	// Reference: https://wordpress.org/support/topic/list-all-posts-on-a-page-split-them-by-year
+
+	$years = array();
+
+	$posts = get_posts(
+		array(
+			'numberposts' => -1,
+			'orderby' => 'post_date',
+			'order' => 'ASC',
+			'post_type' => 'post',
+			'post_status' => 'publish'
+		)
+	);
+
+	foreach($posts as $post) {
+		$years[date('Y', strtotime($post->post_date))][] = $post;
+	}
+
+	krsort($years);
+
+	return $years;
+}
+
 /*------------------------------------*\
 	Actions & Filters
 \*------------------------------------*/
