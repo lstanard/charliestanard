@@ -193,13 +193,13 @@ module.exports = function(grunt) {
 		'uglify'
 	]);
 
-	grunt.registerTask('default', [
+	grunt.registerTask('build', [
 		'style',
 		'script'
 	]);
 
 	grunt.registerTask('dev', [
-		'default',
+		'build',
 		'watch'
 	]);
 
