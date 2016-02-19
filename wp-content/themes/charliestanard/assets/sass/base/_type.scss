@@ -57,7 +57,7 @@ h1 {
 	margin: 0 0 45px 0;
 
 	@extend %roboto;
-	color: $primary-headline;
+	color: $secondary-color;
 	line-height: 3rem;
 
 	text-align: center;
@@ -67,7 +67,7 @@ h2 {
 	margin: 15px 0 45px;
 
 	@extend %roboto-med;
-	color: $secondary-color;
+	color: $primary-headline;
 	font-size: 2.4rem;
 	line-height: 2.8rem;
 }
@@ -98,7 +98,7 @@ ol li {
 	@extend %roboto-light;
 	color: $body-copy;
 	font-size: 1.6rem;
-	line-height: 2.5rem;
+	line-height: 2.8rem;
 }
 
 .intro {
@@ -107,7 +107,7 @@ ol li {
 
 	@include respond($break-tablet1) {
 		font-size: 1.8rem;
-		line-height: 2.8rem;
+		line-height: 3rem;
 		text-indent: 60px;
 	}
 }
