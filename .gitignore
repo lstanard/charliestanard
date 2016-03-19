@@ -39,13 +39,9 @@ wp-content/plugins/*
 wp-content/themes/*
 
 # explicitly ignore the following compiled files/folders
-# wp-content/themes/priorities-usa/css/
-# wp-content/themes/priorities-usa/js/site.js
-# wp-content/themes/priorities-usa/js/vendor-build.js
-# wp-content/themes/priorities-usa/webfontkit-20151102-223851/*
 wp-content/themes/charliestanard/bower_components/
-wp-content/themes/charliestanard/css/*
-wp-content/themes/charliestanard/js/*
+# wp-content/themes/charliestanard/css/*
+# wp-content/themes/charliestanard/js/*
 
 # ignore all files starting with . or ~
 .*

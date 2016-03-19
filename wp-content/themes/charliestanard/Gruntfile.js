@@ -99,9 +99,6 @@ module.exports = function(grunt) {
 				},
 				processors: [
 					require('pixrem')(),
-					require('autoprefixer')({
-						browsers: 'last 4 versions'
-					}),
 					require('postcss-cssnext')(),
 				]
 			},
@@ -193,13 +190,13 @@ module.exports = function(grunt) {
 		'uglify'
 	]);
 
-	grunt.registerTask('build', [
+	grunt.registerTask('default', [
 		'style',
 		'script'
 	]);
 
 	grunt.registerTask('dev', [
-		'build',
+		'default',
 		'watch'
 	]);
 
