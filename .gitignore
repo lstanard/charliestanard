@@ -71,7 +71,7 @@ Thumbs.db
 *.exe
 *.o
 *.so
-*.min.css
+# *.min.css
 
 # ignore packaged files
 *.7z
