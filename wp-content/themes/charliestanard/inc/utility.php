@@ -21,7 +21,7 @@ function cs_get_posts_by_year() {
 		array(
 			'numberposts' => -1,
 			'orderby' => 'post_date',
-			'order' => 'ASC',
+			'order' => 'DESC',
 			'post_type' => 'post',
 			'post_status' => 'publish'
 		)

@@ -19,7 +19,8 @@
 	font-family: "aleolight", Helvetica, Arial, sans-serif;
 	font-weight: normal; }
 
-h1, .intro, .post__nav p {
+h1, .intro, .btn-outline, .btn-outline--white, .project__preview a, .btn-outline--primary, .btn-solid,
+.nav-btn a, .post__nav p {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400; }
 
@@ -29,8 +30,7 @@ ol li, .header__hello + p, .nav a, .post__nav a, .project__tags span {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 300; }
 
-h2, h4, .btn-outline, .btn-outline--white, .project__preview a, .btn-outline--primary, .btn-solid,
-.nav-btn a {
+h2, h4 {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 500; }
 
@@ -818,25 +818,31 @@ form select {
 	form select::-ms-expand {
 		display: none; }
 
-.post img, .post__excerpt img {
+.post img,
+.mce-content-body img, .post__excerpt img {
 	display: block;
 	height: auto;
 	max-width: 100%; }
 
-.post .date, .post__excerpt .date {
+.post .date,
+.mce-content-body .date, .post__excerpt .date {
 	color: lightgray; }
 
-.post h2, .post__excerpt h2, .post h3, .post__excerpt h3, .post h4, .post__excerpt h4 {
+.post h2,
+.mce-content-body h2, .post__excerpt h2, .post h3,
+.mce-content-body h3, .post__excerpt h3, .post h4,
+.mce-content-body h4, .post__excerpt h4 {
 	margin: 30px 0 15px; }
 
-.post code, .post__excerpt code {
+.post code,
+.mce-content-body code, .post__excerpt code {
 	padding: 1px 2px;
 	background-color: #f6f6f6;
 	border: 1px solid #ededed;
 	border-radius: 2px;
-	font-size: 16.704px;
-	font-size: 16.704px;
-	font-size: 1.8rem;
+	font-size: 12.992px;
+	font-size: 12.992px;
+	font-size: 1.4rem;
 	font-weight: normal; }
 
 .post__head {

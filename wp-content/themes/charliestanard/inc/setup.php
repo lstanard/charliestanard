@@ -25,7 +25,7 @@ function include_theme_scripts_styles() {
 
 	wp_enqueue_style(
 		'site',
-		get_template_directory_uri() . '/css/main.min.css'
+		get_template_directory_uri() . '/css/main.css'
 	);
 
 	wp_enqueue_script(
