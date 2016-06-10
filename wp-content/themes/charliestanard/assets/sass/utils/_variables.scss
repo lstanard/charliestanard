@@ -62,20 +62,25 @@ $body-copy: 					$dark-grey;
 $footer-copy:					$dark-grey40;
 $primary-headline:				$dark-grey;
 $nav-link:						$dark-grey30;
+$post-nav-link:					$dark-grey50;
 $excerpt-date:					$dark-grey40;
 $super-copy:					$dark-grey50;
 $hello-copy:					$dark-grey;
 $hello-sub-copy:				$dark-grey50;
+$comment-head:					$green;
 
 // Backgrounds
 $page-bg:						#fff;
 $project-tag-bg:				$green;
 $code-inline-bg:				$light-grey;
+$form-text-bg:					$light-grey;
+$msg-box-bg:					lighten($blue, 35%);
 
 // Borders
 $tile-border:					$light-grey;
 $ruler:							$dark-grey30;
 $code-inline-border:			$dark-grey30;
+$comment-border:				$light-grey;
 
 //  -----------------------------------------------------------------
 //	MISC VARIABLES

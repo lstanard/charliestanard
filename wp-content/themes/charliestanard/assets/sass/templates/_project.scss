@@ -9,7 +9,7 @@
 }
 
 .type-project {
-	@extend %cf;
+	@include cf;
 }
 
 .project__preview {
@@ -26,7 +26,8 @@
 	}
 
 	a {
-		@extend .btn-outline--white;
+		@extend .btn--outline;
+		@extend .btn--white;
 
 		background-color: $primary-color;
 		border-color: $primary-color;
@@ -64,6 +65,10 @@
 		font-size: 1.2rem;
 		line-height: 1.6rem;
 	}
+}
+
+.project__nav {
+	@include supplemental-links();
 }
 
 @include respond($break-tablet1) {

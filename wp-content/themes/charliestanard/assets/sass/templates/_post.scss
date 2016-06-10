@@ -58,46 +58,10 @@
 	}
 }
 
-.post__nav {
-	margin: 60px 0 0 0;
+.post__cats {
+	@include supplemental-links();
 
-	text-align: center;
-
-	p {
-		display: block;
-
-		margin-bottom: 10px;
-
-		@extend %roboto;
-	}
-
-	a {
-		display: block;
-
-		padding: 3px 0 6px 0;
-
-		@extend %roboto-light;
-	}
-
-	@include respond($break-tablet1) {
-
-		a {
-			display: inline-block;
-
-			padding: 0;
-		}
-
-		.links {
-			align-items: center;
-			display: flex;
-			justify-content: center;
-
-			[rel='prev'],
-			[rel='next'] {
-				margin: 0 15px;
-			}
-		}
-	}
+	margin-bottom: 60px;
 }
 
 // Post excerpt group

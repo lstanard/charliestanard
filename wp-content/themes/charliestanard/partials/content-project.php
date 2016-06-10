@@ -25,7 +25,7 @@
 		</div>
 	</div>
 </article>
-<nav class="post__nav">
+<nav class="project__nav">
 	<div class="container">
 		<p>See also:</p>
 		<div class="links">

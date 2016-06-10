@@ -1,4 +1,26 @@
 //  -----------------------------------------------------------------
+//	MIXINS: Helpers
+//  -----------------------------------------------------------------
+
+@mixin cf {
+	zoom: 1;
+
+	&:before,
+	&:after {
+		content: '\0020';
+		display: block;
+		overflow: hidden;
+
+		height: 0;
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+
+//  -----------------------------------------------------------------
 //	MIXINS: Media queries
 //  -----------------------------------------------------------------
 
@@ -46,11 +68,13 @@
 	width: auto;
 
 	background-color: $color;
+	border: none;
 	border-bottom: 3px solid darken($color, 10%);
 	border-radius: 2px;
 
 	@extend %roboto;
 	color: #fff;
+	font-size: 1.5rem;
 	line-height: 20px;
 
 	&:after {
@@ -87,8 +111,56 @@
 }
 
 //  -----------------------------------------------------------------
-//	MIXINS: Project preview
+//	MIXINS: Misc
 //  -----------------------------------------------------------------
+
+@mixin supplemental-links() {
+	margin: 60px 0 0 0;
+
+	text-align: center;
+
+	p {
+		display: block;
+
+		margin-bottom: 10px;
+
+		@extend %roboto;
+		line-height: 2rem;
+	}
+
+	a {
+		display: block;
+
+		padding: 3px 0 6px 0;
+
+		@extend %roboto-light;
+	}
+
+	@include respond($break-tablet1) {
+
+		a {
+			display: inline-block;
+
+			padding: 0;
+		}
+
+		.links {
+			align-items: center;
+			display: flex;
+			justify-content: center;
+
+			a,
+			[rel='prev'],
+			[rel='next'] {
+				margin: 0 15px;
+			}
+
+			p {
+				color: $post-nav-link;
+			}
+		}
+	}
+}
 
 @mixin project-preview() {
 	display: block;

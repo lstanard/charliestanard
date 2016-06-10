@@ -22,9 +22,10 @@
 @import 'components/elements';
 @import 'components/buttons';
 @import 'components/forms';
-@import 'components/post';
 @import 'components/work-grid';
+@import 'components/comments';
 
-@import 'templates/home';
+@import 'templates/front-page';
 @import 'templates/project';
+@import 'templates/post';
 @import 'templates/misc';

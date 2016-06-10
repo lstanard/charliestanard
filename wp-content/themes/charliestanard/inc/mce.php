@@ -19,12 +19,12 @@ function my_mce_before_init( $settings ) {
 		array(
 			'title' => 'Button: Outline',
 			'selector' => 'a',
-			'classes' => 'btn-outline'
+			'classes' => 'btn--outline'
 		),
 		array(
 			'title' => 'Button: Solid',
 			'selector' => 'a',
-			'classes' => 'btn-solid'
+			'classes' => 'btn--solid'
 		),
 		array(
 			'title' => 'Text: Intro copy',

@@ -8,11 +8,10 @@
 	</header>
 	<?php the_content(); ?>
 </article>
-<div class="post__nav">
-	<div class="container">
-		<p>Filed under:</p>
-		<div class="links">
-			<p><?php the_category(', '); ?></p>
-		</div>
+<div class="post__cats">
+	<p>Filed under:</p>
+	<div class="links">
+		<p><?php the_category(' '); ?></p>
 	</div>
 </div>
+<?php comments_template(); ?>

@@ -1,21 +1,3 @@
 //  -----------------------------------------------------------------
 //	UTILITY
 //  -----------------------------------------------------------------
-
-// TODO: I don't like where this is outputting in the final CSS
-%cf {
-	zoom: 1;
-
-	&:before,
-	&:after {
-		content: '\0020';
-		display: block;
-		overflow: hidden;
-
-		height: 0;
-	}
-
-	&:after {
-		clear: both;
-	}
-}

@@ -2,11 +2,11 @@
 //	BUTTONS
 //  -----------------------------------------------------------------
 
-.btn-outline {
+.btn--outline {
 	@include btn('outline');
 }
 
-.btn-outline--white {
+.btn--white {
 	@include btn('outline', #fff, #fff);
 
 	&:hover,
@@ -15,11 +15,18 @@
 	}
 }
 
-.btn-outline--primary {
+.btn--primary {
 	@include btn('outline', $primary-color, $primary-color);
 }
 
-.btn-solid,
+.btn--solid,
 .nav-btn a {
 	@include btn('solid');
+}
+
+.btn--small {
+	padding: 4px 12px;
+
+	font-size: 1.2rem;
+	border-width: 1px;
 }

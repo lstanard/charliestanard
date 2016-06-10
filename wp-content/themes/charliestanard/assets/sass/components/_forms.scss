@@ -4,6 +4,24 @@
 
 form {
 
+	[type='text'],
+	textarea {
+		padding: 12px 20px;
+		width: 100%;
+
+		background-color: $form-text-bg;
+		border: none;
+	}
+
+	[type='text'] {
+		line-height: 3rem;
+	}
+
+	textarea {
+		height: auto;
+		min-height: 200px;
+	}
+
 	select {
 
 		// Suppress default browser select menu styling

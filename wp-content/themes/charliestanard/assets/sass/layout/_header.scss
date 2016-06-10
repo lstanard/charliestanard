@@ -47,7 +47,7 @@
 	li {
 		display: inline-block;
 
-		margin: 0 30px;
+		margin: 0 20px;
 	}
 
 	a {
@@ -59,6 +59,13 @@
 
 	a:hover {
 		color: $secondary-color;
+	}
+
+	@include respond($break-phone2) {
+
+		li {
+			margin: 0 30px;
+		}
 	}
 }
 
